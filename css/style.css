@@ -25,7 +25,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-display: auto;
   color: #1C1C1E;
-  font-size: 1.6rem; }
+  font-size: 1.4rem; }
 
 body a {
   text-decoration: none; }
@@ -58,6 +58,9 @@ body ul {
   display: block;
   backface-visibility: hidden;
   flex: 1.5; }
+
+.u-center {
+  text-align: center; }
 
 .u-uppercase {
   text-transform: uppercase; }
@@ -348,6 +351,13 @@ body ul {
 .content-info {
   position: relative; }
 
+/*Download button*/
+.download-button-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: #1C1C1E;
+  margin-right: .5rem; }
+
 /*ABOUT/COMPETITION/RULES*/
 .competition,
 .rules,
@@ -380,34 +390,77 @@ body ul {
       fill: #1C1C1E;
       margin-left: 1.5rem;
       transform: translateY(0.3rem); }
-    .about__link--cufl {
-      background-color: #a8e063; }
 
 .competition__link {
-  background-color: #a8e063;
   display: inline-block; }
 
-.competition__form {
-  margin-top: 5rem; }
-  .competition__form--icon {
-    width: 1.4rem;
-    height: 1.4rem;
-    fill: #1C1C1E;
-    margin-right: .5rem; }
+.competition-box {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 15rem 0 9rem 0; }
+  .competition-box > :not(:last-child) {
+    margin-right: 2rem; }
+
+.competition__card {
+  flex: 0 0 15%;
+  margin-bottom: 3rem;
+  box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 1rem;
+  position: relative; }
+  .competition__card--icon {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; }
+  .competition__card--svg {
+    width: 3rem;
+    height: 3rem; }
+    .competition__card--svg-dominant {
+      width: 4rem;
+      height: 4rem; }
+  .competition__card--header {
+    padding: 1rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem; }
+  .competition__card--body > * {
+    margin-bottom: 2rem; }
+  .competition__card--premier {
+    order: 5; }
+  .competition__card--d1 {
+    order: 1; }
+  .competition__card--d2 {
+    order: 2; }
+  .competition__card--d3 {
+    order: 3;
+    height: 27rem; }
+  .competition__card--d4 {
+    order: 4; }
 
 .rule-list-box {
   display: flex;
   justify-content: space-between; }
+  .rule-list-box > :not(:last-child) {
+    margin-right: 3rem; }
+
+.rules__subhead {
+  font-size: 2rem;
+  margin: 3rem 0; }
 
 .rules__list {
   margin: 4rem 0 0 3rem;
-  position: relative;
-  counter-reset: section; }
+  position: relative; }
   .rules__list > * {
     padding-left: 4rem;
+    padding-bottom: 6rem;
     position: relative; }
     .rules__list > *::before {
-      counter-increment: section;
       content: " ";
       background-image: url("../img/soccer.png"), linear-gradient(to right, #56ab2f, #a8e063);
       background-size: cover;
@@ -424,7 +477,6 @@ body ul {
       font-size: 1.2rem;
       line-height: 2rem; }
   .rules__list > :not(:last-child) {
-    padding-bottom: 8rem;
     border-left: 2px dashed #333; }
 
 .leagues-container {
@@ -498,7 +550,8 @@ body ul {
       color: #fff;
       border-radius: 1rem;
       opacity: 0;
-      transition: all .3s ease-out; }
+      transition: all .3s ease-out;
+      cursor: initial; }
       .committee__image-box--contact-icon {
         width: 1.6rem;
         height: 1.6rem;
@@ -540,12 +593,12 @@ body ul {
       line-height: 4rem; }
     .futsal-container__link {
       background-color: #fff;
-      margin-top: 5rem; }
+      margin-top: 5rem;
+      transition: all .3s ease-out; }
       .futsal-container__link:hover {
-        background-color: rgba(86, 171, 47, 0.4);
-        color: #fff; }
+        background-color: #89dd5f; }
 
-.resources__referee-heading {
+.resources__sub-heading {
   font-size: 2.5rem; }
 
 .resources__referee-box {
@@ -581,6 +634,13 @@ body ul {
     border-radius: 1rem;
     line-height: 2.7rem; }
 
+.resources__downloads {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 5rem 0; }
+
 /*CUFL*/
 .cufl-nav .active::before,
 .footer-cufl .fcard-active::before,
@@ -592,10 +652,7 @@ body ul {
 
 .cufl-about,
 .cufl-rules {
-  background-color: rgba(168, 224, 99, 0.1);
-  background-size: 50% 130%, cover;
-  background-repeat: no-repeat, no-repeat;
-  background-position: right 30%, center center; }
+  background-color: rgba(168, 224, 99, 0.1); }
 
 .cufl-resources .resources__referee-box--icon {
   fill: #1d7b00; }
@@ -605,6 +662,21 @@ body ul {
 
 .cufl-leagues .leagues__list--links {
   background-color: #89dd5f; }
+
+.cufl-competition .competition__link,
+.cufl-about .about__link,
+.cufl-rules .rules__link,
+.cufl-resources .resources__download--link {
+  background-color: #a8e063; }
+
+.cufl-competition .competition__card--svg {
+  fill: #56ab2f; }
+
+.cufl-competition .competition__card {
+  background-color: rgba(86, 171, 47, 0.1); }
+
+.cufl-competition .competition__card--header {
+  background-color: #a8e063; }
 
 .footer {
   background-image: url("../img/curvy.png"), linear-gradient(to right, #333, #333);

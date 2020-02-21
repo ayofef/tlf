@@ -3,6 +3,13 @@
 
 }
 
+/*Download button*/
+.download-button-icon{
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: #1C1C1E;
+    margin-right: .5rem;
+}
 
 /*ABOUT/COMPETITION/RULES*/
 
@@ -55,9 +62,6 @@
             transform: translateY(.3rem);
         }
 
-        &--cufl{
-            background-color: $cufl-tertiary;
-        }
     }
 }
 
@@ -69,40 +73,107 @@
 .competition{
 
     &__link{
-        background-color: $cufl-tertiary;
         display: inline-block;
         
     }
 
-    &__form{
-        margin-top: 5rem;
 
+    &-box{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 15rem 0 9rem 0;
+
+        & > :not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+
+    &__card{
+        flex: 0 0 15%;
+        margin-bottom: 3rem;
+        box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.2);
+        text-align: center;
+        border-radius: 1rem;
+        position: relative;
 
         &--icon{
-            width: 1.4rem;
-            height: 1.4rem;
-            fill: #1C1C1E;
-            margin-right: .5rem;
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
         }
+        &--svg{
+            width: 3rem;
+            height: 3rem;
+
+            &-dominant{
+                width: 4rem;
+                height: 4rem;
+                
+            }
+        }
+        &--header{
+            padding: 1rem;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            border-top-right-radius: 1rem;
+            border-top-left-radius: 1rem;
+        }
+        &--body{
+            & > *{
+                margin-bottom: 2rem;
+            }
+        }
+        &--premier{
+            order: 5;
+        }
+        &--d1{
+            order: 1;
+        }
+        &--d2{
+            order: 2;
+        }
+        &--d3{
+            order: 3;
+            height: 27rem;
+        }
+        &--d4{
+            order: 4;
+        }
+
+
+
+
+        
     }
 }
 
 .rule-list-box{
     display: flex;
     justify-content: space-between;
+
+    & > :not(:last-child){
+        margin-right: 3rem;
+    }
+}
+.rules__subhead{
+    font-size: 2rem;
+    margin: 3rem 0;
 }
 .rules__list{
     margin: 4rem 0 0 3rem;
     position: relative;
-    counter-reset: section;
 
     & > *{
         padding-left: 4rem;
+        padding-bottom: 6rem;
         position: relative;
         
         &::before{
-            counter-increment: section;
-            // content: counter(section);
             content: " ";
             background-image: url("../img/soccer.png"), linear-gradient(to right, $cufl-primary, $cufl-tertiary);
             background-size: cover;
@@ -123,7 +194,6 @@
     }
 
     & > :not(:last-child){
-        padding-bottom: 8rem;
         border-left: 2px dashed #333;
     }
 }
@@ -230,6 +300,7 @@
             border-radius: 1rem;
             opacity: 0;
             transition: all .3s ease-out;
+            cursor: initial;
 
             &-icon{
                 width: 1.6rem;
@@ -276,7 +347,6 @@
     &-container{
         display: inline-block;
         box-sizing: border-box;
-        // background-color: rgba($cufl-primary, .4);
         padding: 5rem;
         color: #fff;
         border-radius: 2rem;
@@ -288,9 +358,9 @@
         &__link{
             background-color: #fff;
             margin-top: 5rem;
+            transition: all .3s ease-out;
             &:hover{
-                background-color: rgba($cufl-primary, .4);
-                color: #fff;
+                background-color: rgba($cufl-secondary, 1);
             }
             
         }
@@ -299,52 +369,63 @@
 
 
 
-.resources__referee-heading{
+.resources__sub-heading{
     font-size: 2.5rem;
 }
-.resources__referee-box{
+.resources{
+    
+    &__referee-box{
 
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-
-
-    &--card{
-        flex: 1 0 25%;
-        margin-right: 3rem;
-        margin-bottom: 3rem;
-        
-
-        &-sub-heading{
-            display: inline-block;
-            padding: 1.2rem 4rem;
-            border-radius: 3rem;
-            box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
-            text-align: center;
-            background-color: #fff;
-            box-sizing: border-box;
-            transform: translateY(50%);
-            width: fit-content;
-
-        
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    
+    
+        &--card{
+            flex: 1 0 25%;
+            margin-right: 3rem;
+            margin-bottom: 3rem;
+            
+    
+            &-sub-heading{
+                display: inline-block;
+                padding: 1.2rem 4rem;
+                border-radius: 3rem;
+                box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+                text-align: center;
+                background-color: #fff;
+                box-sizing: border-box;
+                transform: translateY(50%);
+                width: fit-content;
+    
+            
+            }
+        }
+        &--icon{
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-right: .5rem;
+            &-sub-head{
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+        &--contact-card{
+            background-color: rgba($cufl-secondary, .2);
+            display: block;
+            padding: 4rem 2rem 2rem 2rem;
+            border-radius: 1rem;
+            line-height: 2.7rem;
+            
         }
     }
-    &--icon{
-        width: 1.4rem;
-        height: 1.4rem;
-        margin-right: .5rem;
-        &-sub-head{
-            width: 1.6rem;
-            height: 1.6rem;
-        }
-    }
-    &--contact-card{
-        background-color: rgba($cufl-secondary, .2);
-        display: block;
-        padding: 4rem 2rem 2rem 2rem;
-        border-radius: 1rem;
-        line-height: 2.7rem;
-        
+
+    &__downloads{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin: 5rem 0;
     }
 }
