@@ -1,0 +1,230 @@
+.league-container{
+    background-color: rgba(245,245,245,.7);
+    padding-bottom: 2rem;
+}
+.subnav{
+    &__nav{
+        background-color: rgb(231, 220, 220);
+    }
+    &__list{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(231, 220, 220);
+
+    }
+
+    &__li{
+        
+        transition: all .3s ease-out;
+
+        &:hover,
+        &:active{
+            background-color: rgba(red, .6);
+        }
+    }
+
+    &__links{
+        padding: 1.2rem 2rem;
+        display: inline-block;
+        color: #000;
+        font-size: 1.2rem;
+    }
+    &__active{
+        background-color: rgba(red, .6);
+        
+        &--link{
+            
+            font-weight: 600;
+        }
+        
+    }
+}
+
+.latest-fixtures{
+    background-image: url("../img/jc-gellidon-XmYSlYrupL8-unsplash.jpg");
+    background-size: cover;
+    background-position: 20% center;
+}
+.next-up-fixtures{
+    padding: 0 3rem 0 3rem;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    &__team-box{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img{
+        width: 9rem;
+        height: 9rem;
+        display: inline-block;
+        
+    }
+    &__team-text{
+        margin-top: 1.5rem;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+
+    &__divider{
+        height: 100%;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(50%);
+
+        &--line{
+            width: 2px;
+            background-color: #333;
+            height: 100%;
+            display: inline-block;
+            transform: skewX(-20deg);
+
+        }
+
+        &--vs{
+            border: 2px solid #333;
+            border-radius: 100%;
+            padding: 1.2rem;
+            transform: translateX(-50%);
+            background-color: #fff;
+            font-weight: 600;
+        }
+    }
+
+    &__details{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2rem 3rem;
+        background-color: #333;
+        box-sizing: border-box;
+
+        &--text{
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+}
+
+
+.fixandstandings-navigation{
+    margin: 2rem 0;
+    &__nav{
+
+        & ul{
+            display: flex;
+            width: 100%;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            & > :not(:last-child){
+                margin-right: 2rem;
+            }
+
+            & li{ 
+                flex: 1;
+                border: 1px solid #333;
+                transition: all .3s ease-out;
+
+                &:hover{
+                    background-color: #333;
+                }
+                &:hover .fixandstandings-navigation__link{
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__link{
+        
+        width: 100%;
+        display: inline-block;
+        padding: 1.2rem 3rem;
+        text-align: center;
+        box-sizing: border-box;
+        font-weight: 600;
+        color: #333;
+    }
+
+    &__active{
+        background-color: #333;
+
+        &--link{
+            color: #fff;
+        }
+    }
+}
+
+.fixtures{
+    margin: 5rem 0;
+
+    & > :not(:last-child){
+        
+     margin-bottom: 3rem;
+    }
+}
+.fixtures-card{
+    box-sizing: border-box;
+    padding: 5rem 0;
+    border-bottom: .9px solid #333;
+    width: 80%;
+    margin: 0 auto;
+
+    &__dates{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+        font-weight: 600;
+
+        &--day{
+            margin: 0 3rem;
+        }
+    }
+
+
+    &__details{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        &--box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &--img{
+            display: block;
+            width: 4rem;
+            height: 4rem;
+        }
+        &--text{
+            margin: 0 1rem;
+        }
+    }
+    &__vs{
+        padding: 1.2rem;
+        font-weight: 600;
+    }
+}

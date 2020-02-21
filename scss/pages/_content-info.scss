@@ -1,0 +1,350 @@
+.content-info{
+    position: relative;
+
+}
+
+
+/*ABOUT/COMPETITION/RULES*/
+
+.competition,
+.rules,
+.committee,
+.leagues,
+.futsal{
+    padding: 8rem 0;
+    
+}
+
+.about{
+    // display: flex;
+    // flex-flow: row wrap;
+    // align-items: center;
+    position: relative;
+    padding: 8rem 0;
+
+    &__container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__image{
+        flex: 1;
+
+        &--img{
+            width: 100%;
+            display: block;
+        }
+    }
+    &__text{
+        flex: 1;
+        margin-right: 5rem;
+
+
+    }
+
+    &__link{
+        margin-top: 3rem;
+
+        &--icon{
+            width: 1.6rem;
+            height: 1.6rem;
+            fill: #1C1C1E;
+            margin-left: 1.5rem;
+            transform: translateY(.3rem);
+        }
+
+        &--cufl{
+            background-color: $cufl-tertiary;
+        }
+    }
+}
+
+
+
+
+
+
+.competition{
+
+    &__link{
+        background-color: $cufl-tertiary;
+        display: inline-block;
+        
+    }
+
+    &__form{
+        margin-top: 5rem;
+
+
+        &--icon{
+            width: 1.4rem;
+            height: 1.4rem;
+            fill: #1C1C1E;
+            margin-right: .5rem;
+        }
+    }
+}
+
+.rule-list-box{
+    display: flex;
+    justify-content: space-between;
+}
+.rules__list{
+    margin: 4rem 0 0 3rem;
+    position: relative;
+    counter-reset: section;
+
+    & > *{
+        padding-left: 4rem;
+        position: relative;
+        
+        &::before{
+            counter-increment: section;
+            // content: counter(section);
+            content: " ";
+            background-image: url("../img/soccer.png"), linear-gradient(to right, $cufl-primary, $cufl-tertiary);
+            background-size: cover;
+            left: 0; 
+            top: 0;
+            transform: translate(-50%, -20%);
+            position: absolute;
+            border-radius: 50%;
+            padding: .5rem;
+            height: 2rem;
+            width: 2rem;
+            // background-color: #fff;
+            text-align:center;
+            color: white;
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+    }
+
+    & > :not(:last-child){
+        padding-bottom: 8rem;
+        border-left: 2px dashed #333;
+    }
+}
+
+.leagues{
+    
+    &-container{
+        display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    min-height: 50rem;
+    }
+
+    &__image{
+        flex:1;
+        display: block;
+        height: 50rem;
+        background-image: url("../img/cup-new.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-left: 10rem;
+        
+    }
+
+    &__list{
+        flex:1;
+
+        &--listul{
+
+            & > :not(:last-child){
+                margin-bottom: 3.5rem;
+            }
+            
+        }
+
+        &--links{
+            text-align: center;
+            padding: 1.5rem 4rem;
+            width: 100%;
+            box-sizing: border-box;
+            color: #fff;
+            
+            text-transform: uppercase;
+        }
+    }
+
+}
+.committee{
+    margin-bottom: 5rem;
+
+    &__container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__item{
+        flex: 0 0 20rem;
+        margin: 2rem;
+        border-radius: .5rem;
+        position: relative;
+        cursor: pointer;
+
+
+        &:hover .committee__image-box--contact{
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+        
+
+    }
+    &__box{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1.5rem;
+        position: relative;
+    }
+    &__image-box{
+        position: relative;
+
+        &--img{
+            width: 100%;
+            display: block;
+            border-radius: 1rem;
+        }
+
+        &--contact{
+            position: absolute;
+            box-sizing: border-box;
+            width: 80%;
+            padding: 5rem .5rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            display: inline-block;
+            word-wrap: break-word;
+            background-color: rgba(#333, .8);
+            text-align: center;
+            color: #fff;
+            border-radius: 1rem;
+            opacity: 0;
+            transition: all .3s ease-out;
+
+            &-icon{
+                width: 1.6rem;
+                height: 1.6rem;
+                fill: #fff;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    
+
+
+    &__caption{
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.2rem;
+        box-sizing: border-box;
+        background-color: transparent;
+        line-height: 2rem;
+
+        &--name{
+            font-size: 1.4rem;
+        }
+    }
+    &__backdrop{
+        position: absolute;
+        height: 80%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+    }
+}
+
+.futsal{
+    height: 400px;
+    background-image: url("../img/kick.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+
+    &-container{
+        display: inline-block;
+        box-sizing: border-box;
+        // background-color: rgba($cufl-primary, .4);
+        padding: 5rem;
+        color: #fff;
+        border-radius: 2rem;
+
+        &__body-text{
+            font-size: 2rem;
+            line-height: 4rem;
+        }
+        &__link{
+            background-color: #fff;
+            margin-top: 5rem;
+            &:hover{
+                background-color: rgba($cufl-primary, .4);
+                color: #fff;
+            }
+            
+        }
+    }
+}
+
+
+
+.resources__referee-heading{
+    font-size: 2.5rem;
+}
+.resources__referee-box{
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    &--card{
+        flex: 1 0 25%;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        
+
+        &-sub-heading{
+            display: inline-block;
+            padding: 1.2rem 4rem;
+            border-radius: 3rem;
+            box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff;
+            box-sizing: border-box;
+            transform: translateY(50%);
+            width: fit-content;
+
+        
+        }
+    }
+    &--icon{
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-right: .5rem;
+        &-sub-head{
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+    &--contact-card{
+        background-color: rgba($cufl-secondary, .2);
+        display: block;
+        padding: 4rem 2rem 2rem 2rem;
+        border-radius: 1rem;
+        line-height: 2.7rem;
+        
+    }
+}

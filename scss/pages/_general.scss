@@ -1,0 +1,74 @@
+.banner{
+    position: relative;
+
+    &__image-container{
+        height: 86vh;
+        width: 100%;
+        overflow: hidden;
+        background-color: #777;
+    }
+
+    &__img{
+        height: 100%;
+        background-image: url("../img/kawasaki.jpg");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: animatedBackground 1s ease-out;
+        transform: scale(1.1);
+        animation-fill-mode: backwards;
+        backface-visibility: hidden;
+        opacity: 1;
+        transform-origin: center right;
+        
+    }
+    
+    
+}
+
+
+.emblem{
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    top: 50%;
+    left: 0;
+    position: absolute;
+    transform: translateY(-30%);
+
+    &__text{
+        margin: 2rem 0;
+        &--heading{
+            font-size: 4rem;
+            animation: moveInBottom .7s ease-out 1s;
+            animation-fill-mode: backwards;
+            backface-visibility: hidden;
+            margin-bottom: 1.5rem;
+            letter-spacing: .5rem;
+            
+            
+        }
+
+        &--sub-text{
+            animation: moveInBottom .7s ease-out 1.6s;
+            animation-fill-mode: backwards;
+            backface-visibility: hidden;
+        }
+    }
+
+    &__logo{
+        animation: moveInBottom .6s ease-out .7s;
+        animation-fill-mode: backwards;
+        backface-visibility: hidden;
+
+        &--img{
+            width: 12rem;
+            height: 12rem;
+        }
+    }
+}
+
+.main-content{
+    position: relative;
+}
+

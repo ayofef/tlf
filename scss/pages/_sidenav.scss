@@ -1,0 +1,115 @@
+.sidebar{
+    position: relative;
+    background-color: #333;
+    
+
+    &__nav{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        width: 100%;
+        
+        
+        
+
+        &--item{
+        }
+        &--item::after{
+            content: "";
+            width: 100%;
+            height: 3px;
+            display: block;
+            transform: scaleX(0);
+            transition: transform .3s ease-out;
+            transform-origin: left;
+            position: relative;
+            
+          }
+          
+        &--item:hover:after{
+            transform: scaleX(1);
+        }
+
+
+        &--links{ 
+            padding: 1.5rem 3rem;
+            display: block;
+            position: relative;
+            color: #fff;
+            z-index: 10;
+            font-weight: 600;
+        }
+    }
+
+    &__resources{
+        position: relative;
+
+        
+
+        &--icon{
+            width: 1.6rem;
+            height: 1.6rem;
+            fill: #fff;
+            margin-left: 1rem;
+            transform: translateY(.2rem);
+            transition: transform .2s ease-out;
+        }
+        &--dropdown{
+            position: absolute;
+            top: 105%;
+            left: 0;
+            background-color: #434345;
+            width: 160px;
+            z-index: 300;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: transform .2s ease-out;
+        }
+    }
+}
+.active{
+    display: block;
+    
+    &::before{
+        content: "";
+        width: 100%;
+        height: .3rem;
+        display: block;
+        transform: scaleX(1);
+        transition: transform .3s ease-out;
+        transform-origin: left;
+        position: relative;
+        margin-top: 1px;
+        
+    }
+}
+.sidebar__resources:hover .sidebar__resources--dropdown{
+    transform: scaleY(1);
+}
+.sidebar__resources:hover .sidebar__resources--icon{
+    transform: rotate(180deg);
+}
+// .sticky {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+// }
+// .sticky + .content-info{
+//     padding-top: 6rem;
+// }
+.navbar-fixed{
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+    animation: stickynav .3s ease-out;
+}
+

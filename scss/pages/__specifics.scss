@@ -1,0 +1,25 @@
+/*CUFL*/
+.cufl-nav .active::before,
+.footer-cufl .fcard-active::before,
+.cufl-nav .sidebar__nav--item::after{
+    background-image: linear-gradient(to right, $cufl-primary, $cufl-tertiary);
+}
+.cufl-heading{
+    color: $cufl-primary-dark;
+}
+.cufl-about,
+.cufl-rules{
+    background-color: rgba($cufl-tertiary, .1);
+    background-size: 50% 130%, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 30%, center center;
+}
+.cufl-resources .resources__referee-box--icon{
+    fill: $cufl-primary-dark;
+}
+.cufl-committee .committee__backdrop{
+    background-color: rgba($cufl-primary, .5);
+}
+.cufl-leagues .leagues__list--links{
+    background-color: rgba($cufl-secondary, 1);
+}
