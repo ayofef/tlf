@@ -33,11 +33,9 @@ body a {
 body ul {
   list-style-type: none; }
 
-.container {
-  width: 90%;
-  margin: 0 auto; }
-
-.container2 {
+.container,
+.container2,
+.container-blog {
   width: 90%;
   margin: 0 auto; }
 
@@ -286,10 +284,11 @@ body ul {
       display: block;
       transform: scaleX(0);
       transition: transform .3s ease-out;
-      transform-origin: left;
+      transform-origin: right;
       position: relative; }
     .sidebar__nav--item:hover:after {
-      transform: scaleX(1); }
+      transform: scaleX(1);
+      transform-origin: left; }
     .sidebar__nav--links {
       padding: 1.5rem 3rem;
       display: block;
@@ -318,19 +317,6 @@ body ul {
       transform: scaleY(0);
       transition: transform .2s ease-out; }
 
-.active {
-  display: block; }
-  .active::before {
-    content: "";
-    width: 100%;
-    height: .3rem;
-    display: block;
-    transform: scaleX(1);
-    transition: transform .3s ease-out;
-    transform-origin: left;
-    position: relative;
-    margin-top: 1px; }
-
 .sidebar__resources:hover .sidebar__resources--dropdown {
   transform: scaleY(1); }
 
@@ -358,6 +344,21 @@ body ul {
   fill: #1C1C1E;
   margin-right: .5rem; }
 
+/*Arrow Buttons*/
+.arrow-button-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: #1C1C1E;
+  margin-left: 1.5rem;
+  transform: translateY(0.3rem); }
+
+.resources-contact-button-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #1C1C1E;
+  margin-right: 1.5rem;
+  transform: translateY(0.4rem); }
+
 /*ABOUT/COMPETITION/RULES*/
 .competition,
 .rules,
@@ -384,70 +385,18 @@ body ul {
     margin-right: 5rem; }
   .about__link {
     margin-top: 3rem; }
-    .about__link--icon {
-      width: 1.6rem;
-      height: 1.6rem;
-      fill: #1C1C1E;
-      margin-left: 1.5rem;
-      transform: translateY(0.3rem); }
 
-.competition__link {
-  display: inline-block; }
-
-.competition-box {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: 15rem 0 9rem 0; }
-  .competition-box > :not(:last-child) {
-    margin-right: 2rem; }
-
-.competition__card {
-  flex: 0 0 15%;
-  margin-bottom: 3rem;
-  box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.2);
-  text-align: center;
-  border-radius: 1rem;
-  position: relative; }
-  .competition__card--icon {
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; }
-  .competition__card--svg {
-    width: 3rem;
-    height: 3rem; }
-    .competition__card--svg-dominant {
-      width: 4rem;
-      height: 4rem; }
-  .competition__card--header {
-    padding: 1rem;
-    margin-bottom: 3rem;
-    font-weight: 600;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem; }
-  .competition__card--body > * {
-    margin-bottom: 2rem; }
-  .competition__card--premier {
-    order: 5; }
-  .competition__card--d1 {
-    order: 1; }
-  .competition__card--d2 {
-    order: 2; }
-  .competition__card--d3 {
-    order: 3;
-    height: 27rem; }
-  .competition__card--d4 {
-    order: 4; }
+.competition__form {
+  margin-top: 4rem; }
 
 .rule-list-box {
   display: flex;
   justify-content: space-between; }
   .rule-list-box > :not(:last-child) {
     margin-right: 3rem; }
+
+.rules__img {
+  width: 100%; }
 
 .rules__subhead {
   font-size: 2rem;
@@ -462,11 +411,10 @@ body ul {
     position: relative; }
     .rules__list > *::before {
       content: " ";
-      background-image: url("../img/soccer.png"), linear-gradient(to right, #56ab2f, #a8e063);
       background-size: cover;
       left: 0;
       top: 0;
-      transform: translate(-50%, -20%);
+      transform: translateX(-50%);
       position: absolute;
       border-radius: 50%;
       padding: .5rem;
@@ -479,34 +427,63 @@ body ul {
   .rules__list > :not(:last-child) {
     border-left: 2px dashed #333; }
 
-.leagues-container {
+.leagues__link {
+  display: inline-block;
+  color: #fff;
+  fill: #fff; }
+
+.leagues-box {
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
-  min-height: 50rem; }
+  align-items: flex-end;
+  margin: 15rem 0 3rem 0; }
+  .leagues-box > :not(:last-child) {
+    margin-right: 2rem; }
 
-.leagues__image {
-  flex: 1;
-  display: block;
-  height: 50rem;
-  background-image: url("../img/cup-new.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-left: 10rem; }
-
-.leagues__list {
-  flex: 1; }
-  .leagues__list--listul > :not(:last-child) {
-    margin-bottom: 3.5rem; }
-  .leagues__list--links {
-    text-align: center;
-    padding: 1.5rem 4rem;
-    width: 100%;
-    box-sizing: border-box;
-    color: #fff;
-    text-transform: uppercase; }
+.leagues__card {
+  flex: 0 0 17rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  padding-bottom: 2rem; }
+  .leagues__card--icon {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; }
+  .leagues__card--svg {
+    width: 3rem;
+    height: 3rem; }
+    .leagues__card--svg-dominant {
+      width: 4rem;
+      height: 4rem; }
+  .leagues__card--header {
+    padding: 1rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem; }
+  .leagues__card--body > * {
+    margin: 0 1.5rem 1rem 1.5rem; }
+  .leagues__card--body > :not(:last-child) {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  .leagues__card--premier {
+    order: 5; }
+  .leagues__card--d1 {
+    order: 1; }
+  .leagues__card--d2 {
+    order: 2; }
+  .leagues__card--d3 {
+    order: 3;
+    height: 27rem; }
+  .leagues__card--d4 {
+    order: 4; }
 
 .committee {
   margin-bottom: 5rem; }
@@ -601,6 +578,34 @@ body ul {
 .resources__sub-heading {
   font-size: 2.5rem; }
 
+.resources__contact {
+  margin-bottom: 5rem; }
+  .resources__contact--box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0; }
+  .resources__contact--link {
+    font-size: 1.7rem;
+    transition: background-color .3s ease-out; }
+
+.resources__downloads {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 5rem 0; }
+  .resources__downloads > :not(:last-child) {
+    margin-right: 3rem; }
+  .resources__downloads--club-guide, .resources__downloads--team-sheet {
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+    flex: 1 1 40%;
+    border-radius: 1rem;
+    text-align: center; }
+  .resources__downloads--link {
+    margin-top: 4rem; }
+
 .resources__referee-box {
   display: flex;
   flex-flow: row wrap;
@@ -628,18 +633,10 @@ body ul {
       width: 1.6rem;
       height: 1.6rem; }
   .resources__referee-box--contact-card {
-    background-color: rgba(137, 221, 95, 0.2);
     display: block;
     padding: 4rem 2rem 2rem 2rem;
     border-radius: 1rem;
     line-height: 2.7rem; }
-
-.resources__downloads {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin: 5rem 0; }
 
 /*CUFL*/
 .cufl-nav .active::before,
@@ -663,20 +660,49 @@ body ul {
 .cufl-leagues .leagues__list--links {
   background-color: #89dd5f; }
 
-.cufl-competition .competition__link,
 .cufl-about .about__link,
+.cufl-competition .competition__link,
 .cufl-rules .rules__link,
-.cufl-resources .resources__download--link {
+.cufl-resources .resources__downloads--link,
+.cufl-resources .resources__contact--link {
+  background-color: #89dd5f; }
+  .cufl-about .about__link:hover, .cufl-about .about__link:active,
+  .cufl-competition .competition__link:hover,
+  .cufl-competition .competition__link:active,
+  .cufl-rules .rules__link:hover,
+  .cufl-rules .rules__link:active,
+  .cufl-resources .resources__downloads--link:hover,
+  .cufl-resources .resources__downloads--link:active,
+  .cufl-resources .resources__contact--link:hover,
+  .cufl-resources .resources__contact--link:active {
+    background-color: #a8e063; }
+
+.cufl-leagues .leagues__card--svg {
+  fill: #fff; }
+
+.cufl-leagues .leagues__card {
+  background-color: #e8e8e8; }
+
+.cufl-leagues .leagues__card--header {
   background-color: #a8e063; }
 
-.cufl-competition .competition__card--svg {
-  fill: #56ab2f; }
+.cufl-leagues .leagues__link {
+  background-color: #fff; }
+  .cufl-leagues .leagues__link:hover, .cufl-leagues .leagues__link:active {
+    background-color: #89dd5f; }
 
-.cufl-competition .competition__card {
-  background-color: rgba(86, 171, 47, 0.1); }
+.cufl-resources .resources__downloads--club-guide,
+.cufl-resources .resources__downloads--team-sheet,
+.cufl-resources .resources__referee-box--contact-card {
+  background-color: rgba(137, 221, 95, 0.2); }
 
-.cufl-competition .competition__card--header {
-  background-color: #a8e063; }
+.cufl-rules .rules__list > *::before {
+  background-image: url("../img/soccer.png"), linear-gradient(to right, #56ab2f, #a8e063); }
+
+.cufl-leagues {
+  background-image: url("../img/competition.jpg");
+  background-size: cover;
+  background-position: right bottom; }
 
 .footer {
   background-image: url("../img/curvy.png"), linear-gradient(to right, #333, #333);
@@ -716,6 +742,92 @@ body ul {
     width: 100%;
     height: 2px;
     transform: translateY(-2rem); }
+
+.blog-nav ul {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center; }
+  .blog-nav ul > :not(:last-child) {
+    margin-right: 2rem; }
+
+.blog-nav li {
+  flex: 1;
+  color: #000;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  border: 1px solid #000; }
+
+.blog-nav a {
+  padding: 1rem 0;
+  display: block;
+  text-align: center; }
+
+.blog-posts__container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.blog-posts__card {
+  flex: 0 1 50rem;
+  margin-bottom: 5rem;
+  cursor: pointer; }
+  .blog-posts__card--image {
+    height: 20rem;
+    overflow: hidden; }
+    .blog-posts__card--image-img {
+      width: 100%; }
+  .blog-posts__card--text-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0; }
+  .blog-posts__card--text-excerpt {
+    color: #777; }
+  .blog-posts__card--text-date {
+    color: #777;
+    margin: 1rem 0 1.5rem 0; }
+  .blog-posts__card--link:link, .blog-posts__card--link:visited {
+    color: #000;
+    display: inline-block;
+    padding: 1rem 1rem 1rem 0;
+    transition: all .3s ease-out; }
+  .blog-posts__card--link:hover, .blog-posts__card--link:active {
+    background-image: linear-gradient(to right, #56ab2f, #a8e063);
+    padding: 1rem 1rem 1rem 1rem; }
+  .blog-posts__card--link::after {
+    display: block;
+    position: relative;
+    content: "";
+    width: 100%;
+    background-image: linear-gradient(to right, #56ab2f, #a8e063);
+    height: 1.5px;
+    transform: translateY(0.9rem); }
+
+/*single blog-post*/
+.blog-single__card--image {
+  overflow: hidden; }
+  .blog-single__card--image-img {
+    width: 100%; }
+
+.blog-single__card--text-heading {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 2rem; }
+
+.blog-single__card--text-excerpt {
+  margin: 2rem 0; }
+
+.blog-single__card--text-author {
+  font-weight: 600;
+  color: #777; }
+
+.blog-single__card--text-date {
+  color: #777;
+  margin-bottom: 2rem;
+  font-size: 1.2rem; }
 
 .league-container {
   background-color: rgba(245, 245, 245, 0.7);
@@ -951,7 +1063,9 @@ body ul {
 
 @media screen and (min-width: 1100px) {
   .container {
-    max-width: 1100px; } }
+    max-width: 1100px; }
+  .container-blog {
+    max-width: 600px; } }
 
 @media screen and (min-width: 1600px) {
   .container2 {

@@ -1,0 +1,142 @@
+.blog-nav{
+
+    & ul{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        & > :not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+    & li{
+        flex: 1;
+        color: #000;
+        background-color: #fff;
+        margin-bottom: 2rem;
+        border: 1px solid #000;
+
+    }
+    & a{
+        padding: 1rem 0;
+        display: block;
+        text-align: center;
+    }
+}
+
+.blog-posts{
+    
+    &__container{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__card{
+        flex: 0 1 50rem;
+        margin-bottom: 5rem;
+        cursor: pointer;
+
+
+        &:hover{
+           
+        }
+
+        &--image{
+            height: 20rem;
+            overflow: hidden;
+            &-img{
+                width: 100%;
+            }
+        }
+
+        &--text{
+            
+
+            &-heading{
+                font-size: 2rem;
+                font-weight: 600;
+                margin: 2rem 0 1rem 0;
+            }
+
+            &-excerpt{
+                color: #777;
+            }
+
+            &-date{
+                color: #777;
+                margin: 1rem 0 1.5rem 0;
+            }
+        }
+
+        &--link:link,
+        &--link:visited{
+            color: #000;
+            display: inline-block;
+            padding: 1rem 1rem 1rem 0;
+            transition: all .3s ease-out;
+
+        }
+        &--link:hover,
+        &--link:active{
+            background-image: linear-gradient(to right, $cufl-primary, $cufl-tertiary);
+            padding: 1rem 1rem 1rem 1rem;
+
+        }
+        &--link::after{
+            display: block;
+            position: relative;
+            content: "";
+            width: 100%;
+            background-image: linear-gradient(to right, $cufl-primary, $cufl-tertiary);
+            height: 1.5px;
+            transform: translateY(.9rem);
+        }
+    }
+}
+
+
+/*single blog-post*/
+.blog-single{
+    
+    &__container{
+    }
+
+    &__card{
+
+        &--image{
+            overflow: hidden;
+            &-img{
+                width: 100%;
+            }
+        }
+
+        &--text{
+            
+
+            &-heading{
+                font-size: 3rem;
+                font-weight: 600;
+                margin-top: 2rem;
+            }
+
+            &-excerpt{
+                margin: 2rem 0;
+            }
+            &-author{
+                font-weight: 600;
+                color: #777;
+            }
+
+            &-date{
+                color: #777;
+                margin-bottom: 2rem;
+                font-size: 1.2rem;
+            }
+            
+        }
+    }
+}

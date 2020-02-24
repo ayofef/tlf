@@ -1,0 +1,78 @@
+/*CUFL*/
+.cufl-nav .active::before,
+.footer-cufl .fcard-active::before,
+.cufl-nav .sidebar__nav--item::after{
+    background-image: linear-gradient(to right, $cufl-primary, $cufl-tertiary);
+}
+.cufl-heading{
+    color: $cufl-primary-dark;
+}
+.cufl-about,
+.cufl-rules{
+    background-color: rgba($cufl-tertiary, .1);
+}
+.cufl-resources .resources__referee-box--icon{
+    fill: $cufl-primary-dark;
+}
+.cufl-committee .committee__backdrop{
+    background-color: rgba($cufl-primary, .5);
+}
+.cufl-leagues .leagues__list--links{
+    background-color: rgba($cufl-secondary, 1);
+}
+
+.cufl-about .about__link,
+.cufl-competition .competition__link,
+.cufl-rules .rules__link,
+.cufl-resources .resources__downloads--link,
+.cufl-resources .resources__contact--link{
+    background-color: $cufl-secondary;
+
+    &:hover,
+    &:active{
+        background-color: rgba($cufl-tertiary, 1);
+    }
+}
+.cufl-leagues .leagues__card--svg{
+    fill: #fff;
+}
+.cufl-leagues .leagues__card{
+    // background-color: rgba($cufl-tertiary, .5);
+    background-color: rgb(232,232,232);
+}
+.cufl-leagues .leagues__card--header{
+    background-color: $cufl-tertiary;
+}
+.cufl-leagues .leagues__link{
+    background-color: #fff;
+
+    &:hover,
+    &:active{
+        background-color: $cufl-secondary;
+    }
+}
+
+.cufl-resources .resources__downloads--club-guide,
+.cufl-resources .resources__downloads--team-sheet,
+.cufl-resources .resources__referee-box--contact-card{
+    
+    background-color: rgba($cufl-secondary, .2);
+}
+
+.cufl-rules .rules__list > *::before{
+    background-image: url("../img/soccer.png"), linear-gradient(to right, $cufl-primary, $cufl-tertiary);
+}
+.cufl-leagues{
+    background-image: url("../img/competition.jpg");
+    background-size: cover;
+    background-position: right bottom;
+}
+
+// {
+//     background-color: $cufl-tertiary;
+
+//     &:hover,
+//     &:active{
+//         background-color: rgba($cufl-secondary, .2);
+//     }
+// }

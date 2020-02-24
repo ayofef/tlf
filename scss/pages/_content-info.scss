@@ -10,6 +10,24 @@
     fill: #1C1C1E;
     margin-right: .5rem;
 }
+/*Arrow Buttons*/
+.arrow-button-icon{
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: #1C1C1E;
+    margin-left: 1.5rem;
+    transform: translateY(.3rem);
+}
+
+.resources-contact-button-icon{
+    width: 2rem;
+    height: 2rem;
+    fill: #1C1C1E;
+    margin-right: 1.5rem;
+    transform: translateY(.4rem);
+
+    
+}
 
 /*ABOUT/COMPETITION/RULES*/
 
@@ -53,15 +71,14 @@
 
     &__link{
         margin-top: 3rem;
+    }
+}
 
-        &--icon{
-            width: 1.6rem;
-            height: 1.6rem;
-            fill: #1C1C1E;
-            margin-left: 1.5rem;
-            transform: translateY(.3rem);
-        }
 
+.competition{
+
+    &__form{
+        margin-top: 4rem;
     }
 }
 
@@ -69,11 +86,62 @@
 
 
 
+.rule-list-box{
+    display: flex;
+    justify-content: space-between;
 
-.competition{
+    & > :not(:last-child){
+        margin-right: 3rem;
+    }
+}
+.rules__img{
+    width: 100%;
+}
+.rules__subhead{
+    font-size: 2rem;
+    margin: 3rem 0;
+}
+.rules__list{
+    margin: 4rem 0 0 3rem;
+    position: relative;
+
+    & > *{
+        padding-left: 4rem;
+        padding-bottom: 6rem;
+        position: relative;
+        
+        &::before{
+            content: " ";
+            background-size: cover;
+            left: 0; 
+            top: 0;
+            transform: translateX(-50%);
+            position: absolute;
+            border-radius: 50%;
+            padding: .5rem;
+            height: 2rem;
+            width: 2rem;
+            // background-color: #fff;
+            text-align:center;
+            color: white;
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+    }
+
+    & > :not(:last-child){
+        border-left: 2px dashed #333;
+    }
+}
+
+
+
+.leagues{
 
     &__link{
         display: inline-block;
+        color: #fff;
+        fill: #fff;
         
     }
 
@@ -84,7 +152,7 @@
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-end;
-        margin: 15rem 0 9rem 0;
+        margin: 15rem 0 3rem 0;
 
         & > :not(:last-child){
             margin-right: 2rem;
@@ -92,12 +160,13 @@
     }
 
     &__card{
-        flex: 0 0 15%;
+        flex: 0 0 17rem;
         margin-bottom: 3rem;
-        box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.3);
         text-align: center;
         border-radius: 1rem;
         position: relative;
+        padding-bottom: 2rem;
 
         &--icon{
             position: absolute;
@@ -109,6 +178,7 @@
         &--svg{
             width: 3rem;
             height: 3rem;
+            
 
             &-dominant{
                 width: 4rem;
@@ -125,7 +195,12 @@
         }
         &--body{
             & > *{
-                margin-bottom: 2rem;
+                margin: 0 1.5rem 1rem 1.5rem;
+            }
+
+            & > :not(:last-child){
+                padding-bottom: 1rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
             }
         }
         &--premier{
@@ -152,98 +227,8 @@
     }
 }
 
-.rule-list-box{
-    display: flex;
-    justify-content: space-between;
 
-    & > :not(:last-child){
-        margin-right: 3rem;
-    }
-}
-.rules__subhead{
-    font-size: 2rem;
-    margin: 3rem 0;
-}
-.rules__list{
-    margin: 4rem 0 0 3rem;
-    position: relative;
 
-    & > *{
-        padding-left: 4rem;
-        padding-bottom: 6rem;
-        position: relative;
-        
-        &::before{
-            content: " ";
-            background-image: url("../img/soccer.png"), linear-gradient(to right, $cufl-primary, $cufl-tertiary);
-            background-size: cover;
-            left: 0; 
-            top: 0;
-            transform: translate(-50%, -20%);
-            position: absolute;
-            border-radius: 50%;
-            padding: .5rem;
-            height: 2rem;
-            width: 2rem;
-            // background-color: #fff;
-            text-align:center;
-            color: white;
-            font-size: 1.2rem;
-            line-height: 2rem;
-        }
-    }
-
-    & > :not(:last-child){
-        border-left: 2px dashed #333;
-    }
-}
-
-.leagues{
-    
-    &-container{
-        display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    
-    min-height: 50rem;
-    }
-
-    &__image{
-        flex:1;
-        display: block;
-        height: 50rem;
-        background-image: url("../img/cup-new.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        margin-left: 10rem;
-        
-    }
-
-    &__list{
-        flex:1;
-
-        &--listul{
-
-            & > :not(:last-child){
-                margin-bottom: 3.5rem;
-            }
-            
-        }
-
-        &--links{
-            text-align: center;
-            padding: 1.5rem 4rem;
-            width: 100%;
-            box-sizing: border-box;
-            color: #fff;
-            
-            text-transform: uppercase;
-        }
-    }
-
-}
 .committee{
     margin-bottom: 5rem;
 
@@ -373,6 +358,54 @@
     font-size: 2.5rem;
 }
 .resources{
+
+
+    &__contact{
+        margin-bottom: 5rem;
+
+        &--box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 4rem 0;
+        }
+
+        &--link{
+            font-size: 1.7rem;
+            transition: background-color .3s ease-out;
+            
+        }
+    }
+
+
+    &__downloads{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin: 5rem 0;
+
+        & > :not(:last-child){
+            margin-right: 3rem;
+        }
+
+        &--club-guide, &--team-sheet{
+            padding: 3rem 1rem;
+            box-sizing: border-box;
+            flex: 1 1 40%;
+            border-radius: 1rem;
+            text-align: center;
+        }
+
+        &--link{
+
+            margin-top: 4rem;
+        }
+    }
+
+
+
+
     
     &__referee-box{
 
@@ -412,7 +445,6 @@
             }
         }
         &--contact-card{
-            background-color: rgba($cufl-secondary, .2);
             display: block;
             padding: 4rem 2rem 2rem 2rem;
             border-radius: 1rem;
@@ -421,11 +453,5 @@
         }
     }
 
-    &__downloads{
-        width: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin: 5rem 0;
-    }
+   
 }
