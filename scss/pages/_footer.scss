@@ -14,9 +14,18 @@
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-start;
+
+        @media screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
     
         & > :not(:last-child){
             margin-right: 2rem;
+
+            @media screen and (max-width: $bp-small) {
+                margin-right: 0;
+                margin-bottom: 4rem;
+            }
         }
     }
 }

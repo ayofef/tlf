@@ -6,7 +6,7 @@
 
     <title>Sports Team</title>
     <link rel="stylesheet" href="css/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
     <meta name="description" content="#####">
@@ -22,29 +22,29 @@
      <div class="container">
          <div class="masthead">
              <div class="masthead__logo">
-                <a href="index.html">LOGO</a>
+                <a href="index.html">Home</a>
              </div>
 
              <nav class="masthead__nav">
                  <ul>
                      <li><a href="#">
-                         <svg class="masthead__icon">
+                         <svg class="masthead__icon" aria-hidden="true">
                              <use xlink:href="img/sprite.svg#icon-facebook-with-circle"></use>
                          </svg>
                      </a></li>
                      <li><a href="#">
-                         <svg class="masthead__icon">
+                         <svg class="masthead__icon" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#icon-twitter-with-circle"></use>
                         </svg>
                     </a></li>
                     <li><a href="#">
-                        <svg class="masthead__icon">
+                        <svg class="masthead__icon" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#icon-instagram-with-circle"></use>
                         </svg>
                     </a></li>
                     <li><a href="#">
-                        <svg class="masthead__icon">
-                            <use xlink:href="img/sprite.svg#icon-google-with-circle"></use>
+                        <svg class="masthead__icon" aria-hidden="true">
+                            <use xlink:href="img/sprite.svg#icon-mail4"></use>
                         </svg>
                     </a></li>
                  </ul>
@@ -60,7 +60,7 @@
             <section class="emblem">
                 <div class="container">
                     <div class="emblem__logo">
-                        <img src="img/indesign.png" alt="CUFL LOGO" class="emblem__logo--img">
+                        <img src="img/indesign.png" alt="Cfia LOGO" class="emblem__logo--img">
                     </div>
                     <div class="emblem__text">
                         <h1 class="emblem__text--heading u-bold">WSCAI</h1>
@@ -69,136 +69,790 @@
                 </div>
             </section>
         </div>
-        <div class="container">
+        
             <div class="main-content">
-                <nav class="sidebar" id="navbar">
-                    <div id="nav-box">
-                        <ul class="sidebar__nav" id="top-menu">
-                            <li class="sidebar__nav--item active"><a href="#wscai-about" class="sidebar__nav--links u-uppercase">About Us</a></li>
-                            <li class="sidebar__nav--item"><a href="#wscai-competition" class="sidebar__nav--links u-uppercase">Competition</a></li>
-                            <li class="sidebar__nav--item"><a href="#wscai-rules" class="sidebar__nav--links u-uppercase">Rules</a></li>
-                            <li class="sidebar__nav--item"><a href="#wscai-committee" class="sidebar__nav--links u-uppercase">Committee</a></li>
-                        </ul>
+                <nav class="sidebar wscai-nav" id="navbar">
+                    <div class="container">
+                        <div class="navigation__mobile">
+                            <p class="navigation__mobile--text u-bold">MENU 
+                                <span><svg class="sidebar__resources--icon">
+                                <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
+                            </p>
+                        </div>
+                        <div class="nav-box">
+                            <ul class="sidebar__nav" id="top-menu">
+                                <li class="sidebar__nav--item active"><a href="#cufl-about" class="sidebar__nav--links u-uppercase">About Us</a></li>
+                                <li class="sidebar__nav--item"><a href="#cufl-competition" class="sidebar__nav--links u-uppercase">Competition</a></li>
+                                <li class="sidebar__nav--item"><a href="#cufl-rules" class="sidebar__nav--links u-uppercase">Rules</a></li>
+                                <li class="sidebar__nav--item"><a href="#cufl-leagues" class="sidebar__nav--links u-uppercase">Leagues</a></li>
+                                <li class="sidebar__nav--item"><a href="#cufl-committee" class="sidebar__nav--links u-uppercase">Committee</a></li>
+                                <li class="sidebar__resources">
+                                    <a href="#" class="sidebar__nav--links u-uppercase">More <span><svg class="sidebar__resources--icon">
+                                        <use xlink:href="img/sprite.svg#icon-chevron-down"></use></a>
+                                        <ul class="sidebar__resources--dropdown">
+                                            <li class="sidebar__nav--item"><a class="sidebar__nav--links u-uppercase" href="#cufl-futsal">Intl. Team</a></li>
+                                            <li class="sidebar__nav--item"><a class="sidebar__nav--links u-uppercase" href="#cufl-futsal">Futsal</a></li>
+                                            <li class="sidebar__nav--item"><a class="sidebar__nav--links u-uppercase" href="#">Contacts</a></li>
+                                            <li class="sidebar__nav--item"><a class="sidebar__nav--links u-uppercase" href="#">Club Guide</a></li>
+                                            <li class="sidebar__nav--item"><a class="sidebar__nav--links u-uppercase" href="#">Team Sheet</a></li>
+                                            <li class="sidebar__nav--item"><a class="sidebar__nav--links u-uppercase" href="#cufl-referee">Referees</a></li>
+                                            <li class="sidebar__nav--item"><a class="sidebar__nav--links u-uppercase" href="#cufl-referee">Blog</a></li>
+                                        </ul>
+                                    
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
+
                 <div class="content-info">
-                    <section class="about" id="wscai-about">
-                        <div class="about__image">
-                            <img class="about__image--img" src="img/hermes.jpg" alt="About img">
-                        </div>
-                        <div class="about__text">
-                            <div class="content-info__header">
-                                <div class="u-line"></div>
-                                <h2 class="u-heading u-bold">ABOUT US</h2>
-                                <div class="u-line"></div>
+                    <section class="about wscai-about" id="wscai-about">
+                        <div class="container">
+                            <div class="about__container">
+                                <div class="about__text">
+                                    <h2 class="u-heading u-bold wscai-heading">ABOUT US</h2>
+                                    <p class="u-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit qui saepe incidunt doloremque hic animi facilis dolorum? Quisquam ullam fugit, in omnis eveniet libero accusantium nam debitis fuga nobis modi rerum quam voluptatum alias adipisci impedit consectetur dignissimos reprehenderit doloremque dicta quidem qui hic. Blanditiis quibusdam quis autem, quos, aspernatur facere ratione possimus, a quidem voluptate incidunt. Quasi placeat natus dolorem qui ullam inventore vitae error soluta minima saepe? Esse labore magnam tempora quae, dolor quisquam distinctio provident voluptas soluta consequatur! In corporis, provident culpa iste molestias ad illum. Voluptate numquam veniam at esse quia consequatur excepturi corrupti? Tenetur!</p>
+                                    <a href="#wscai-blog" class="btn about__link">Read Our Blog <span><svg class="arrow-button-icon" aria-hidden="true">
+                                        <use xlink:href="img/sprite.svg#icon-chevron-right"></use>
+                                    </svg></span></a>
+                                    
+                                </div>
+                                <div class="about__image">
+                                    <img class="about__image--img" src="img/hermes.jpg" alt="About img">
+                                </div>
                             </div>
-                            <p class="u-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit qui saepe incidunt doloremque hic animi facilis dolorum? Quisquam ullam fugit, in omnis eveniet libero accusantium nam debitis fuga nobis modi rerum quam voluptatum alias adipisci impedit consectetur dignissimos reprehenderit doloremque dicta quidem qui hic. Blanditiis quibusdam quis autem, quos, aspernatur facere ratione possimus, a quidem voluptate incidunt. Quasi placeat natus dolorem qui ullam inventore vitae error soluta minima saepe? Esse labore magnam tempora quae, dolor quisquam distinctio provident voluptas soluta consequatur! In corporis, provident culpa iste molestias ad illum. Voluptate numquam veniam at esse quia consequatur excepturi corrupti? Tenetur!</p>
                         </div>
                     </section>
-                    <section class="competition" id="wscai-competition">
-                        <div class="content-info__header">
-                            <div class="u-line"></div>
-                            <h2 class="u-heading u-bold">COMPETTION</h2>
-                            <div class="u-line"></div>
+                    <section class="competition wscai-competition" id="wscai-competition">
+                        <div class="container">
+                            <h2 class="u-heading u-bold wscai-heading">COMPETITIONS</h2>
+                            <p class="u-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis ab dolore molestias reprehenderit dolorem, perspiciatis fugiat architecto dolores labore, ratione totam saepe sapiente consectetur! Tempore dolore minus numquam iste, corporis atque labore tempora architecto expedita nobis distinctio. Amet inventore cumque impedit! Distinctio velit, nisi nihil obcaecati minima nostrum alias ea itaque optio blanditiis vitae enim tempore atque, doloribus consectetur quos delectus possimus necessitatibus. Inventore enim explicabo aliquam eaque similique consectetur, distinctio officiis mollitia quidem natus quisquam ratione libero officia illo id nesciunt amet? Voluptatum quae architecto ad officiis deserunt eaque error magnam, quasi ex maxime temporibus nam cupiditate accusantium repellendus doloremque iste enim dignissimos! Soluta fuga odio voluptatum, quaerat recusandae nesciunt dicta! Porro magni rerum illo, harum tempora hic ipsam qui consequuntur repellendus, vero tempore accusantium impedit ipsum quam dicta quidem aspernatur iste perferendis sint quis sed, ullam dignissimos numquam! Fugiat porro error id unde ab sequi nisi aliquid natus, perferendis debitis soluta architecto similique, amet suscipit voluptate incidunt doloremque maxime dolores facilis consequatur reprehenderit. Sapiente eos sed itaque modi qui odio voluptate nulla sint ipsum. Maiores molestiae dolorum reprehenderit, officiis eius enim accusamus dolor sed nulla eaque aperiam, sint architecto quo ipsam quis quasi sunt perspiciatis accusantium excepturi. Aperiam quam quisquam a dolorum, possimus quod ipsa iste, inventore porro omnis quo? Repellat reprehenderit, animi ipsam sequi dolor minus doloremque dignissimos qui voluptate quo, vitae culpa esse reiciendis quam non aperiam impedit consequatur in? Sint ipsum quos quisquam recusandae dolores totam quis molestiae amet pariatur impedit sit iusto necessitatibus voluptas magni quaerat, ipsa esse non. Magnam velit impedit commodi, nostrum dolorem, vero voluptatem voluptate fugit quibusdam numquam enim ut aliquid, perspiciatis minima. Provident nisi est repellat voluptate aspernatur, voluptates non beatae laboriosam velit corporis! Quaerat corporis modi id necessitatibus possimus? Ipsa quibusdam dignissimos amet beatae impedit necessitatibus nihil adipisci?</p>
+                            <div class="competition__form">
+                                <a class="competition__link btn" href="#" download>
+                                    <span>
+                                        <svg class="download-button-icon">
+                                            <use xlink:href="img/sprite.svg#icon-download"></use>
+                                        </svg>
+                                    </span> Application Form</a>
+                            </div>
                         </div>
-                        <p class="u-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit qui saepe incidunt doloremque hic animi facilis dolorum? Quisquam ullam fugit, in omnis eveniet libero accusantium nam debitis fuga nobis modi rerum quam voluptatum alias adipisci impedit consectetur dignissimos reprehenderit doloremque dicta quidem qui hic. Blanditiis quibusdam quis autem, quos, aspernatur facere ratione possimus, a quidem voluptate incidunt. Quasi placeat natus dolorem qui ullam inventore vitae error soluta minima saepe? Esse labore magnam tempora quae, dolor quisquam distinctio provident voluptas soluta consequatur! In corporis, provident culpa iste molestias ad illum. Voluptate numquam veniam at esse quia consequatur excepturi corrupti? Tenetur!</p>
-                        <div class="competition__form">
-                            <a class="competition__link btn" href="#" download>
+                    </section>
+                    <section class="rules wscai-rules" id="wscai-rules">
+                        <div class="container">
+                            <h2 class="u-heading u-bold wscai-heading">RULES</h2>
+                            <img class="rules__img" src="img/referee.jpg" alt="referee image">
+                            <p class="rules__subhead">Colleges and Universities Football League Rules 2019 - 2020</p>
+                            <div class="rule-list-box">
+                                <ul class="rules__list">
+                                    <li>All Competition’s shall be preceded by the Colleges & Universities Football League (hereinafter referred to as wscai) and is played under the auspices of the Football Association of Ireland (hereinafter referred to as “the FAI”).</li>
+                                    <li>In all references to the Committee in the course of these Rules, it shall be understood and
+                                        accepted that the words “the Committee” shall read “the wscai Committee”.</li>
+                                </ul>
+                                <ul class="rules__list">
+                                    <li>The Committee shall have the power to delegate some or all of its powers or functions in
+                                        relation to the running of the wscai on a day to day basis to the Administrator of the League.
+                                        Each year the Committee shall appoint a Disciplinary Committee and a Disciplinary Appeals
+                                        Committee.</li>
+                                    <li>The competition shall be conducted in accordance with these rules (hereinafter referred to
+                                        as “wscai Rules”). In the event of a conflict between the wscai rules and the rules of the FAI,
+                                        the FAI rules shall prevail, provided that such rules in all circumstances comply with the
+                                        Laws of the Game as decreed by FIFA.</li>
+                                    
+                                </ul>
+                            </div>
+                            <a class="rules__link btn" href="asset/cufl/cufl_rules.pdf" download>
                                 <span>
-                                    <svg class="competition__form--icon">
+                                    <svg class="download-button-icon">
                                         <use xlink:href="img/sprite.svg#icon-download"></use>
                                     </svg>
-                                </span> Application Form</a>
+                                </span> Competition Rules
+                            </a>
                         </div>
                     </section>
-                    <section class="rules" id="wscai-rules">
-                        <div class="content-info__header">
-                            <div class="u-line"></div>
-                            <h2 class="u-heading u-bold">RULES</h2>
-                            <div class="u-line"></div>
-                        </div>
-                        <p class="u-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae tenetur eius consectetur?</p>
-                        <div class="rule-list-box">
-                            <ul class="rules__list">
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                            </ul>
-                            <ul class="rules__list rules__list--2">
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                            </ul>
+                    
+                    <section class="committee wscai-committee" id="wscai-committee">
+                        <div class="container">
+                            <h2 class="u-heading u-bold wscai-heading">COMMITTEE</h2>
+                            <div class="committee__container">
+                                <figure class="committee__item">
+                                    <div class="committee__box">
+                                        <div class="committee__image-box">
+                                            <img src="img/leonel.jpg" alt="img 1" class="committee__image-box--img">
+                                            <p class="committee__image-box--contact">
+                                                <span>
+                                                    <svg class="committee__image-box--contact-icon">
+                                                        <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                    </svg>
+                                                </span>
+                                                joe.obrien@tudublin.ie</p>
+                                        </div>
+                                        <p class="committee__caption"><span class="committee__caption--name u-bold">Joe O'Brien</span><br>Chairman</p>
+                                    </div>
+                                    <div class="committee__backdrop">&nbsp;</div>
+                                </figure>
+                                <figure class="committee__item">
+                                    <div class="committee__box">
+                                        <div class="committee__image-box">
+                                            <img src="img/leonel.jpg" alt="img 1" class="committee__image-box--img">
+                                            <p class="committee__image-box--contact">
+                                                <span>
+                                                    <svg class="committee__image-box--contact-icon">
+                                                        <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                    </svg>
+                                                </span>
+                                                tmcauley61@gmail.com</p>
+                                        </div>
+                                        <p class="committee__caption"><span class="committee__caption--name u-bold">Terry McAuley</span><br>Vice Chairman</p>
+                                    </div>
+                                    <div class="committee__backdrop">&nbsp;</div>
+                                </figure>
+                                <figure class="committee__item">
+                                    <div class="committee__box">
+                                        <div class="committee__image-box">
+                                            <img src="img/leonel.jpg" alt="img 1" class="committee__image-box--img">
+                                            <p class="committee__image-box--contact">
+                                                <span>
+                                                    <svg class="committee__image-box--contact-icon">
+                                                        <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                    </svg>
+                                                </span>
+                                                paul.walsh@griffith.ie</p>
+                                        </div>
+                                        <p class="committee__caption"><span class="committee__caption--name u-bold">Paul Walsh</span><br>Treasurer</p>
+                                    </div>
+                                    <div class="committee__backdrop">&nbsp;</div>
+                                </figure>
+                                <figure class="committee__item">
+                                    <div class="committee__box">
+                                        <div class="committee__image-box">
+                                            <img src="img/leonel.jpg" alt="img 1" class="committee__image-box--img">
+                                            <p class="committee__image-box--contact">
+                                                <span>
+                                                    <svg class="committee__image-box--contact-icon">
+                                                        <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                    </svg>
+                                                </span>
+                                                liammac9@eircom.net</p>
+                                        </div>
+                                        <p class="committee__caption"><span class="committee__caption--name u-bold">Liam McCarthy</span><br>#######</p>
+                                    </div>
+                                    <div class="committee__backdrop">&nbsp;</div>
+                                </figure>
+                                <figure class="committee__item">
+                                    <div class="committee__box">
+                                        <div class="committee__image-box">
+                                            <img src="img/leonel.jpg" alt="img 1" class="committee__image-box--img">
+                                            <p class="committee__image-box--contact">
+                                                <span>
+                                                    <svg class="committee__image-box--contact-icon">
+                                                        <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                    </svg>
+                                                </span>
+                                                paddy.gallagher@lyit.ie</p>
+                                        </div>
+                                        <p class="committee__caption"><span class="committee__caption--name u-bold">Paddy Gallagher</span><br>#######</p>
+                                    </div>
+                                    <div class="committee__backdrop">&nbsp;</div>
+                                </figure>
+                                <figure class="committee__item">
+                                    <div class="committee__box">
+                                        <div class="committee__image-box">
+                                            <img src="img/leonel.jpg" alt="img 1" class="committee__image-box--img">
+                                            <p class="committee__image-box--contact">
+                                                <span>
+                                                    <svg class="committee__image-box--contact-icon">
+                                                        <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                    </svg>
+                                                </span>
+                                                d.clarke@qub.ac.uk</p>
+                                        </div>
+                                        <p class="committee__caption"><span class="committee__caption--name u-bold">Denis Clarke</span><br>#######</p>
+                                    </div>
+                                    <div class="committee__backdrop">&nbsp;</div>
+                                </figure>
+                            </div>
                         </div>
                     </section>
-                    <section class="committee" id="wscai-committee">
-                        <div class="content-info__header">
-                            <div class="u-line"></div>
-                            <h2 class="u-heading u-bold">COMMITTEE</h2>
-                            <div class="u-line"></div>
-                        </div>
-                        <div class="committee__container">
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
-                            <figure class="committee__item">
-                                <img src="img/leonel.jpg" alt="img 1" class="committee__img">
-                                <figcaption class="committee__caption"><span class="committee__caption--name u-bold">JOHN DOE</span><br>COMMUNICATION OFFICER</figcaption>
-                            </figure>
+                    <section class="resources wscai-resources" id="wscai-referee">
+                        <div class="container">
+                            <div class="resources-container">
+                                <h2 class="u-heading u-bold wscai-heading">Resources</h2>
+                                <div class="resources__contact">
+                                    <h3 class="u-bold wscai-heading resources__sub-heading">Contacts</h3>
+                                    <div class="resources__contact--box">
+                                        <a class="resources__contact--link btn" href="#" download>
+                                            <span>
+                                                <svg class="resources-contact-button-icon">
+                                                    <use xlink:href="img/sprite.svg#icon-mail4"></use>
+                                                    </svg>
+                                            </span> wscai@gmail.com</a>
+                                            <a class="resources__contact--link btn" href="#" download>
+                                                <span>
+                                                    <svg class="resources-contact-button-icon">
+                                                        <use xlink:href="img/sprite.svg#icon-facebook-with-circle"></use>
+                                                        </svg>
+                                                </span> wscai_Ireland</a>
+                                                <a class="resources__contact--link btn" href="#" download>
+                                                    <span>
+                                                        <svg class="resources-contact-button-icon">
+                                                            <use xlink:href="img/sprite.svg#icon-twitter-with-circle"></use>
+                                                            </svg>
+                                                    </span> @ wscai_Ireland</a>
+                                                    <a class="resources__contact--link btn" href="#" download>
+                                                        <span>
+                                                            <svg class="resources-contact-button-icon">
+                                                                <use xlink:href="img/sprite.svg#icon-instagram-with-circle"></use>
+                                                                </svg>
+                                                        </span> @ wscai_Ireland</a>
+                                    </div>
+                                </div>
+                                <div class="resources__downloads">
+                                    <div class="resources__downloads--club-guide">
+                                        <h3 class="u-bold wscai-heading resources__sub-heading">Club Guide</h3>
+                                        <a class="resources__downloads--link btn" href="#" download>
+                                            <span>
+                                                <svg class="download-button-icon">
+                                                    <use xlink:href="img/sprite.svg#icon-download"></use>
+                                                </svg>
+                                            </span> Download</a>
+                                    </div>
+                                    <div class="resources__downloads--team-sheet">
+                                        <h3 class="u-bold wscai-heading resources__sub-heading">Team Sheet</h3>
+                                        <a class="resources__downloads--link btn" href="#" download>
+                                            <span>
+                                                <svg class="download-button-icon">
+                                                    <use xlink:href="img/sprite.svg#icon-download"></use>
+                                                </svg>
+                                            </span> Download</a>
+                                    </div>
+                                </div>
+                                <div class="resources__referee">
+                                    <h3 class="u-bold wscai-heading resources__sub-heading">Referees</h3>
+                                    <div class="resources__referee-box">
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Carlow
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Michael Walsh
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    087 652 6537
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    mwalsh@carlowsoccer.ie
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Cavan
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Sean Brady
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    087 687 2700
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    scbrady@eircom.net
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Louth
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Ollie O'Connor
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    087 233 6643
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    ollieoc@eircom.net
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Cork
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Brian O'Regan
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    086 811 3959
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    oreganbp@eircom.net
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Donegal
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Aidan Redican
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    086 603 9063
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    aredican73@mail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Dublin Kildare Meath Wicklow
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Aidan Redican
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    085 752 3858
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    dannylambe59@hotmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Galway
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    PJ Norman
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    087 907 3736
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    pjnorman48@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Kerry
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    John O'Regan
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    086 265 6605
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    johnkdl@eircom.net
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Mayo
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Jimmy Blake
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    086 069 4918
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    jamesblake1951@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Sligo
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Paul Deering
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    087 234 1819
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    pauldeering569@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Tipperary
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Paul Horgan
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    087 657 3940
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    phorga01@eircom.net
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Waterford
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Martin O'Callaghan
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    087 970 8332
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    mwocal@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Westmeath
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Declan Toland
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    085 775 3961 
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    deckietoland@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="resources__referee-box--card">
+                                            <h4 class="resources__referee-box--card-sub-heading wscai-heading">
+                                                <span>
+                                                    <svg class="resources__referee-box--icon resources__referee-box--icon-sub-head">
+                                                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                                                    </svg>
+                                                </span>
+                                                Northern Ireland
+                                            </h4>
+                                            <div class="resources__referee-box--contact-card">
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                                                        </svg>
+                                                    </span>
+                                                    William Campton
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                        </svg>
+                                                    </span>
+                                                    0044 7730 381133 
+                                                </p>
+                                                <p>
+                                                    <span>
+                                                        <svg class="resources__referee-box--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-email"></use>
+                                                        </svg>
+                                                    </span>
+                                                    William.Campton@afbini.gov.uk
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
             </div>
-        </div>
+        
     </main>
-    <footer class="footer">
+    <footer class="footer footer-wscai">
       <div class="container">
         <div class="footer__box">
             <div class="fcard">
                 <a href="cufl.html" class="fcard__heading">CUFL</a>
                 <ul class="fcard__list">
-                    <li><a href="cufl.html#cufl-about" class="fcard__link">About Us</a></li>
-                    <li><a href="cufl.html#cufl-competition" class="fcard__link">Competition</a></li>
-                    <li><a href="cufl.html#cufl-rules" class="fcard__link">Rules</a></li>
-                    <li><a href="cufl.html#cufl-leagues" class="fcard__link">Leagues</a></li>
-                    <li><a href="cufl.html#cufl-committee" class="fcard__link">Committee</a></li>
+                    <li><a href="#cufl-about" class="fcard__link">About Us</a></li>
+                    <li><a href="#cufl-competition" class="fcard__link">Competition</a></li>
+                    <li><a href="#cufl-rules" class="fcard__link">Rules</a></li>
+                    <li><a href="#cufl-leagues" class="fcard__link">Leagues</a></li>
+                    <li><a href="#cufl-committee" class="fcard__link">Committee</a></li>
                 </ul>
             </div>
             <div class="fcard">
@@ -222,10 +876,10 @@
             <div class="fcard fcard-active">
                 <a href="wscai.html" class="fcard__heading ">WSCAI</a>
                 <ul class="fcard__list">
-                    <li><a href="#wscai-about" class="fcard__link">About Us</a></li>
-                    <li><a href="#wscai-competition" class="fcard__link">Competition</a></li>
-                    <li><a href="#wscai-rules" class="fcard__link">Rules</a></li>
-                    <li><a href="#wscai-committee" class="fcard__link">Committee</a></li>
+                    <li><a href="wscai.html#wscai-about" class="fcard__link">About Us</a></li>
+                    <li><a href="wscai.html#wscai-competition" class="fcard__link">Competition</a></li>
+                    <li><a href="wscai.html#wscai-rules" class="fcard__link">Rules</a></li>
+                    <li><a href="wscai.html#wscai-committee" class="fcard__link">Committee</a></li>
                 </ul>
             </div>
               
@@ -237,9 +891,8 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/date.js"></script>
-    <script src="js/nav.js"></script>
     <script src="js/sticky.js"></script>
 
-
+    
   </body>
 </html>

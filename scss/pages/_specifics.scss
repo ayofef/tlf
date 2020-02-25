@@ -1,5 +1,4 @@
 /*CUFL*/
-.cufl-nav .active::before,
 .footer-cufl .fcard-active::before,
 .cufl-nav .sidebar__nav--item::after{
     background-image: linear-gradient(to right, $cufl-primary, $cufl-tertiary);
@@ -25,7 +24,8 @@
 .cufl-competition .competition__link,
 .cufl-rules .rules__link,
 .cufl-resources .resources__downloads--link,
-.cufl-resources .resources__contact--link{
+.cufl-resources .resources__contact--link,
+.cufl-international .international__link{
     background-color: $cufl-secondary;
 
     &:hover,
@@ -68,11 +68,167 @@
     background-position: right bottom;
 }
 
-// {
-//     background-color: $cufl-tertiary;
+/*CFAI*/
+.footer-cfai .fcard-active::before,
+.cfai-nav .sidebar__nav--item::after{
+    background-image: linear-gradient(to right, $cfai-tertiary, $cfai-tertiary);
+}
+.cfai-heading{
+    color: $cfai-primary-dark;
+}
+.cfai-about,
+.cfai-rules{
+    background-color: rgba($cfai-tertiary, .1);
+}
+.cfai-resources .resources__referee-box--icon{
+    fill: $cfai-primary-dark;
+}
+.cfai-committee .committee__backdrop{
+    background-color: rgba($cfai-tertiary, .5);
+}
 
-//     &:hover,
-//     &:active{
-//         background-color: rgba($cufl-secondary, .2);
-//     }
+.cfai-about .about__link,
+.cfai-competition .competition__link,
+.cfai-rules .rules__link,
+.cfai-resources .resources__downloads--link,
+.cfai-resources .resources__contact--link{
+    background-color: $cfai-secondary;
+
+    &:hover,
+    &:active{
+        background-color: rgba($cfai-tertiary, .6);
+    }
+}
+
+
+.cfai-resources .resources__downloads--club-guide,
+.cfai-resources .resources__downloads--team-sheet,
+.cfai-resources .resources__referee-box--contact-card{
+    
+    background-color: rgba($cfai-tertiary, .2);
+}
+
+.cfai-rules .rules__list > *::before{
+    background-image: url("../img/soccer.png"), linear-gradient(to right, $cfai-primary, $cfai-tertiary);
+}
+
+
+
+
+/*IUFU*/
+.footer-iufu .fcard-active::before,
+.iufu-nav .sidebar__nav--item::after{
+    background-image: linear-gradient(to right, $iufu-primary, $iufu-primary);
+}
+.iufu-heading{
+    color: $iufu-primary-dark;
+}
+.iufu-about,
+.iufu-rules{
+    background-color: rgba($iufu-tertiary, .1);
+}
+.iufu-resources .resources__referee-box--icon{
+    fill: $iufu-primary-dark;
+}
+.iufu-committee .committee__backdrop{
+    background-color: rgba($iufu-primary, .4);
+}
+
+.iufu-about .about__link,
+.iufu-competition .competition__link,
+.iufu-rules .rules__link,
+.iufu-resources .resources__downloads--link,
+.iufu-resources .resources__contact--link{
+    color: #fff;
+    background-color: $iufu-secondary;
+
+    &:hover,
+    &:active{
+        background-color: rgba($iufu-tertiary, 1);
+    }
+}
+
+
+.iufu-resources .resources__downloads--club-guide,
+.iufu-resources .resources__downloads--team-sheet,
+.iufu-resources .resources__referee-box--contact-card{
+    
+    background-color: rgba($iufu-secondary, .2);
+}
+
+.iufu-rules .rules__list > *::before{
+    background-image: url("../img/soccer.png"), linear-gradient(to right, $iufu-primary, $iufu-tertiary);
+}
+
+.iufu-about .arrow-button-icon{
+    fill: #fff;
+}
+
+
+.iufu-competition .download-button-icon,
+.iufu-rules .download-button-icon,
+.iufu-resources .download-button-icon,
+.iufu-resources .resources-contact-button-icon{
+    fill: #fff;
+}
+
+
+/*wscai*/
+.footer-wscai .fcard-active::before,
+.wscai-nav .sidebar__nav--item::after{
+    background-image: linear-gradient(to right, $wscai-primary, $wscai-tertiary);
+}
+.wscai-heading{
+    color: $wscai-primary-dark;
+}
+.wscai-about,
+.wscai-rules{
+    background-color: rgba($wscai-tertiary, .1);
+}
+.wscai-resources .resources__referee-box--icon{
+    fill: $wscai-primary-dark;
+}
+.wscai-committee .committee__backdrop{
+    background-color: rgba($wscai-primary, .4);
+}
+
+.wscai-about .about__link,
+.wscai-competition .competition__link,
+.wscai-rules .rules__link,
+.wscai-resources .resources__downloads--link,
+.wscai-resources .resources__contact--link{
+    // color: #fff;
+    background-color: $wscai-tertiary;
+
+    &:hover,
+    &:active{
+        background-color: rgba($wscai-secondary, 1);
+    }
+}
+
+
+.wscai-resources .resources__downloads--club-guide,
+.wscai-resources .resources__downloads--team-sheet,
+.wscai-resources .resources__referee-box--contact-card{
+    
+    background-color: rgba($wscai-secondary, .2);
+}
+
+.wscai-rules .rules__list > *::before{
+    background-image: url("../img/soccer.png"), linear-gradient(to right, $wscai-primary, $wscai-tertiary);
+}
+
+// .wscai-about .arrow-button-icon{
+//     fill: #fff;
 // }
+
+
+// .wscai-competition .download-button-icon,
+// .wscai-rules .download-button-icon,
+// .wscai-resources .download-button-icon,
+// .wscai-resources .resources-contact-button-icon{
+//     fill: #fff;
+// }
+
+
+

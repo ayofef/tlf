@@ -19,6 +19,7 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%; }
 
 body {
@@ -42,20 +43,20 @@ body ul {
 .copyright {
   text-align: center; }
 
+/*
+
+ @media screen and (max-width: $bp-smallest) {
+*/
 .u-bold {
   font-weight: 600; }
 
 .u-heading {
   font-size: 3rem;
-  flex: 1 0 2;
   margin-bottom: 3rem; }
-
-.u-line {
-  background-color: #333;
-  height: .9px;
-  display: block;
-  backface-visibility: hidden;
-  flex: 1.5; }
+  @media screen and (max-width: 37.5em) {
+    .u-heading {
+      font-size: 2rem;
+      margin-bottom: 2rem; } }
 
 .u-center {
   text-align: center; }
@@ -96,16 +97,48 @@ body ul {
   .masthead__logo {
     font-size: 2rem;
     font-weight: 600; }
+    @media screen and (max-width: 56.25em) {
+      .masthead__logo {
+        font-size: 1.5rem; } }
+    .masthead__logo--link:link, .masthead__logo--link:visited {
+      color: #000;
+      transition: color .3s ease-out; }
+    .masthead__logo--link:hover, .masthead__logo--link:active {
+      color: #777; }
+    .masthead__logo--link::after {
+      content: "";
+      background-color: #777;
+      width: 100%;
+      height: 2px;
+      display: block;
+      transform: scaleX(0);
+      transition: transform .3s ease-out;
+      transform-origin: right;
+      position: relative; }
+    .masthead__logo--link:hover:after, .masthead__logo--link:active:after {
+      transform: scaleX(1);
+      transform-origin: left; }
   .masthead__nav ul > :not(:last-child) {
     margin-right: 1.5rem; }
   .masthead__nav li {
     display: inline-block; }
-  .masthead__nav a {
+  .masthead__nav--link {
     color: inherit;
     display: inline-block; }
+    .masthead__nav--link:link .masthead__icon,
+    .masthead__nav--link:visited .masthead__icon {
+      transition: fill .3s ease-out;
+      fill: #000; }
+    .masthead__nav--link:hover .masthead__icon,
+    .masthead__nav--link:active .masthead__icon {
+      fill: #777; }
   .masthead__icon {
     width: 2rem;
     height: 2rem; }
+    @media screen and (max-width: 56.25em) {
+      .masthead__icon {
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .landing2-container {
   width: 100%;
@@ -115,10 +148,38 @@ body ul {
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden; }
-  .landing2-container .masthead a {
-    color: #fff; }
-  .landing2-container .masthead__icon {
-    fill: #fff; }
+  @media screen and (max-width: 37.5em) {
+    .landing2-container {
+      height: 100%;
+      overflow: visible; } }
+  .landing2-container--link:link, .landing2-container--link:visited {
+    color: #000; }
+  .landing2-container--link:hover, .landing2-container--link:active {
+    color: #777; }
+  .landing2-container .masthead__logo--link:link, .landing2-container .masthead__logo--link:visited {
+    color: #fff;
+    transition: color .3s ease-out; }
+  .landing2-container .masthead__logo--link:hover, .landing2-container .masthead__logo--link:active {
+    color: #777; }
+  .landing2-container .masthead__logo--link::after {
+    content: "";
+    background-color: #777;
+    width: 100%;
+    height: 2px;
+    display: block;
+    transform: scaleX(0);
+    transition: transform .3s ease-out;
+    transform-origin: right;
+    position: relative; }
+  .landing2-container .masthead__logo--link:hover:after, .landing2-container .masthead__logo--link:active:after {
+    transform: scaleX(1);
+    transform-origin: left; }
+  .landing2-container .masthead__nav .masthead__icon {
+    fill: #fff;
+    transition: fill .3s ease-out; }
+  .landing2-container .masthead__nav--link:hover .masthead__icon,
+  .landing2-container .masthead__nav--link:active .masthead__icon {
+    fill: #777; }
 
 .landing2-card {
   display: flex;
@@ -127,8 +188,17 @@ body ul {
   align-items: center;
   width: 100%;
   margin-top: auto; }
+  @media screen and (max-width: 37.5em) {
+    .landing2-card {
+      flex-flow: column wrap;
+      margin-top: 1rem;
+      margin-bottom: 10rem; } }
   .landing2-card > :not(:last-child) {
     margin-right: 2rem; }
+    @media screen and (max-width: 37.5em) {
+      .landing2-card > :not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2.5rem; } }
   .landing2-card__description {
     position: absolute;
     bottom: 0;
@@ -193,12 +263,20 @@ body ul {
   display: flex;
   flex-flow: column wrap;
   align-items: center; }
+  @media screen and (max-width: 37.5em) {
+    .landing2-content {
+      height: 100%;
+      flex-direction: column; } }
 
 .landing2__banner {
   color: #fff;
   height: 50%;
   transform: translateY(50%);
   text-align: center; }
+  @media screen and (max-width: 37.5em) {
+    .landing2__banner {
+      height: 30rem;
+      margin-bottom: 8rem; } }
   .landing2__banner--heading {
     display: block;
     font-size: 6rem;
@@ -208,12 +286,26 @@ body ul {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     backface-visibility: hidden; }
+    @media screen and (max-width: 56.25em) {
+      .landing2__banner--heading {
+        font-size: 4rem; } }
+    @media screen and (max-width: 37.5em) {
+      .landing2__banner--heading {
+        font-size: 3rem;
+        letter-spacing: .5rem; } }
+    @media screen and (max-width: 21.87em) {
+      .landing2__banner--heading {
+        font-size: 2rem; } }
   .landing2__banner--paragraph {
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
     backface-visibility: hidden; }
+    @media screen and (max-width: 37.5em) {
+      .landing2__banner--paragraph {
+        font-size: 1.5rem;
+        letter-spacing: .5rem; } }
 
 .banner {
   position: relative; }
@@ -252,6 +344,9 @@ body ul {
       backface-visibility: hidden;
       margin-bottom: 1.5rem;
       letter-spacing: .5rem; }
+      @media screen and (max-width: 37.5em) {
+        .emblem__text--heading {
+          font-size: 3rem; } }
     .emblem__text--sub-text {
       animation: moveInBottom .7s ease-out 1.6s;
       animation-fill-mode: backwards;
@@ -261,8 +356,12 @@ body ul {
     animation-fill-mode: backwards;
     backface-visibility: hidden; }
     .emblem__logo--img {
-      width: 12rem;
-      height: 12rem; }
+      width: 10rem;
+      height: 10rem; }
+      @media screen and (max-width: 37.5em) {
+        .emblem__logo--img {
+          width: 7rem;
+          height: 7rem; } }
 
 .main-content {
   position: relative; }
@@ -277,6 +376,14 @@ body ul {
     align-items: center;
     background-color: #333;
     width: 100%; }
+    @media screen and (max-width: 56.25em) {
+      .sidebar__nav {
+        flex-direction: column; } }
+    @media screen and (max-width: 56.25em) {
+      .sidebar__nav--item {
+        border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+        width: 100%;
+        text-align: center; } }
     .sidebar__nav--item::after {
       content: "";
       width: 100%;
@@ -286,7 +393,7 @@ body ul {
       transition: transform .3s ease-out;
       transform-origin: right;
       position: relative; }
-    .sidebar__nav--item:hover:after {
+    .sidebar__nav--item:hover:after, .sidebar__nav--item:active:after {
       transform: scaleX(1);
       transform-origin: left; }
     .sidebar__nav--links {
@@ -307,7 +414,7 @@ body ul {
       transition: transform .2s ease-out; }
     .sidebar__resources--dropdown {
       position: absolute;
-      top: 105%;
+      top: 100%;
       left: 0;
       background-color: #434345;
       width: 160px;
@@ -315,12 +422,22 @@ body ul {
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       transform-origin: top;
       transform: scaleY(0);
-      transition: transform .2s ease-out; }
+      transition: transform .2s ease-out;
+      /* should be triggered by click event*/ }
+      @media screen and (max-width: 56.25em) {
+        .sidebar__resources--dropdown {
+          position: relative;
+          top: 0;
+          box-shadow: none;
+          transform: scaleY(1);
+          width: 100%; } }
 
-.sidebar__resources:hover .sidebar__resources--dropdown {
+.sidebar__resources:hover .sidebar__resources--dropdown,
+.sidebar__resources:active .sidebar__resources--dropdown {
   transform: scaleY(1); }
 
-.sidebar__resources:hover .sidebar__resources--icon {
+.sidebar__resources:hover .sidebar__resources--icon,
+.sidebar__resources:active .sidebar__resources--icon {
   transform: rotate(180deg); }
 
 .navbar-fixed {
@@ -333,6 +450,27 @@ body ul {
   transform: scaleY(1);
   transform-origin: top;
   animation: stickynav .3s ease-out; }
+
+/*Moblie*/
+.navigation__mobile {
+  text-align: center;
+  display: none; }
+  .navigation__mobile--text {
+    color: #fff;
+    padding: 1rem; }
+  @media screen and (max-width: 56.25em) {
+    .navigation__mobile {
+      display: block; } }
+
+@media screen and (max-width: 56.25em) {
+  .nav-box {
+    display: none;
+    transform: scaleY(0); } }
+
+/* should be triggered by click event*/
+@media screen and (max-width: 56.25em) {
+  .sidebar {
+    cursor: pointer; } }
 
 .content-info {
   position: relative; }
@@ -364,7 +502,8 @@ body ul {
 .rules,
 .committee,
 .leagues,
-.futsal {
+.futsal,
+.international {
   padding: 8rem 0; }
 
 .about {
@@ -375,14 +514,25 @@ body ul {
     display: flex;
     justify-content: center;
     align-items: flex-start; }
+    @media screen and (max-width: 56.25em) {
+      .about__container {
+        flex-direction: column; } }
   .about__image {
     flex: 1; }
+    @media screen and (max-width: 56.25em) {
+      .about__image {
+        order: 1;
+        margin-bottom: 3rem; } }
     .about__image--img {
       width: 100%;
       display: block; }
   .about__text {
     flex: 1;
     margin-right: 5rem; }
+    @media screen and (max-width: 56.25em) {
+      .about__text {
+        order: 2;
+        margin-right: 0; } }
   .about__link {
     margin-top: 3rem; }
 
@@ -390,10 +540,20 @@ body ul {
   margin-top: 4rem; }
 
 .rule-list-box {
+  width: 100%;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between; }
+  @media screen and (max-width: 37.5em) {
+    .rule-list-box {
+      flex-direction: column; } }
   .rule-list-box > :not(:last-child) {
     margin-right: 3rem; }
+    @media screen and (max-width: 37.5em) {
+      .rule-list-box > :not(:last-child) {
+        margin-right: 0; }
+        .rule-list-box > :not(:last-child) > * {
+          border-left: 2px dashed #333; } }
 
 .rules__img {
   width: 100%; }
@@ -401,14 +561,25 @@ body ul {
 .rules__subhead {
   font-size: 2rem;
   margin: 3rem 0; }
+  @media screen and (max-width: 37.5em) {
+    .rules__subhead {
+      margin-bottom: 5rem;
+      font-size: 1.5rem; } }
 
 .rules__list {
   margin: 4rem 0 0 3rem;
   position: relative; }
+  @media screen and (max-width: 37.5em) {
+    .rules__list {
+      margin: 0; } }
   .rules__list > * {
     padding-left: 4rem;
     padding-bottom: 6rem;
     position: relative; }
+    @media screen and (max-width: 37.5em) {
+      .rules__list > * {
+        padding-left: 2rem;
+        padding-bottom: 4rem; } }
     .rules__list > *::before {
       content: " ";
       background-size: cover;
@@ -424,6 +595,10 @@ body ul {
       color: white;
       font-size: 1.2rem;
       line-height: 2rem; }
+      @media screen and (max-width: 37.5em) {
+        .rules__list > *::before {
+          width: 1rem;
+          height: 1rem; } }
   .rules__list > :not(:last-child) {
     border-left: 2px dashed #333; }
 
@@ -438,9 +613,16 @@ body ul {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 15rem 0 3rem 0; }
+  margin: 10rem 0 3rem 0; }
+  @media screen and (max-width: 56.25em) {
+    .leagues-box {
+      flex-direction: column;
+      align-items: center; } }
   .leagues-box > :not(:last-child) {
     margin-right: 2rem; }
+    @media screen and (max-width: 56.25em) {
+      .leagues-box > :not(:last-child) {
+        margin-right: 0; } }
 
 .leagues__card {
   flex: 0 0 17rem;
@@ -450,12 +632,23 @@ body ul {
   border-radius: 1rem;
   position: relative;
   padding-bottom: 2rem; }
+  @media screen and (max-width: 56.25em) {
+    .leagues__card {
+      width: 100%; } }
   .leagues__card--icon {
     position: absolute;
     top: -20%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%; }
+    @media screen and (max-width: 56.25em) {
+      .leagues__card--icon {
+        display: none; } }
+    .leagues__card--icon-premier-star {
+      display: none; }
+      @media screen and (max-width: 56.25em) {
+        .leagues__card--icon-premier-star {
+          display: block; } }
   .leagues__card--svg {
     width: 3rem;
     height: 3rem; }
@@ -484,6 +677,42 @@ body ul {
     height: 27rem; }
   .leagues__card--d4 {
     order: 4; }
+  @media screen and (max-width: 56.25em) {
+    .leagues__card--premier {
+      order: 1; }
+    .leagues__card--d1 {
+      order: 2; }
+    .leagues__card--d2 {
+      order: 3; }
+    .leagues__card--d3 {
+      order: 4;
+      height: initial; }
+    .leagues__card--d4 {
+      order: 5; } }
+
+.international__box {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center; }
+  @media screen and (max-width: 37.5em) {
+    .international__box {
+      flex-direction: column; } }
+  .international__box--texts {
+    flex: 2;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: space-between;
+    order: 2; }
+  .international__box--image {
+    flex: 1;
+    order: 1; }
+    .international__box--image-img {
+      width: 100%; }
+
+.international__link {
+  margin-top: 4rem; }
 
 .committee {
   margin-bottom: 5rem; }
@@ -492,13 +721,17 @@ body ul {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center; }
+    @media screen and (max-width: 56.25em) {
+      .committee__container {
+        justify-content: center; } }
   .committee__item {
     flex: 0 0 20rem;
     margin: 2rem;
     border-radius: .5rem;
     position: relative;
     cursor: pointer; }
-    .committee__item:hover .committee__image-box--contact {
+    .committee__item:hover .committee__image-box--contact,
+    .committee__item:active .committee__image-box--contact {
       opacity: 1;
       transform: translate(-50%, -50%); }
   .committee__box {
@@ -572,22 +805,41 @@ body ul {
       background-color: #fff;
       margin-top: 5rem;
       transition: all .3s ease-out; }
-      .futsal-container__link:hover {
+      .futsal-container__link:hover, .futsal-container__link:active {
         background-color: #89dd5f; }
 
 .resources__sub-heading {
   font-size: 2.5rem; }
+  @media screen and (max-width: 37.5em) {
+    .resources__sub-heading {
+      font-size: 1.9rem; } }
 
 .resources__contact {
   margin-bottom: 5rem; }
   .resources__contact--box {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     margin: 4rem 0; }
+    @media screen and (max-width: 56.25em) {
+      .resources__contact--box {
+        flex-direction: column; } }
+    .resources__contact--box > :not(::last-child) {
+      margin-right: 1.5rem; }
   .resources__contact--link {
     font-size: 1.7rem;
-    transition: background-color .3s ease-out; }
+    transition: background-color .3s ease-out;
+    margin-bottom: 2.5rem; }
+    @media screen and (max-width: 56.25em) {
+      .resources__contact--link {
+        margin-bottom: 2.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center; } }
+    @media screen and (max-width: 37.5em) {
+      .resources__contact--link {
+        font-size: 1.5rem; } }
 
 .resources__downloads {
   width: 100%;
@@ -595,8 +847,15 @@ body ul {
   flex-flow: row wrap;
   justify-content: space-around;
   margin: 5rem 0; }
+  @media screen and (max-width: 37.5em) {
+    .resources__downloads {
+      flex-direction: column; } }
   .resources__downloads > :not(:last-child) {
     margin-right: 3rem; }
+    @media screen and (max-width: 37.5em) {
+      .resources__downloads > :not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2rem; } }
   .resources__downloads--club-guide, .resources__downloads--team-sheet {
     padding: 3rem 1rem;
     box-sizing: border-box;
@@ -611,10 +870,16 @@ body ul {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-start; }
+  @media screen and (max-width: 37.5em) {
+    .resources__referee-box {
+      flex-direction: column; } }
   .resources__referee-box--card {
     flex: 1 0 25%;
     margin-right: 3rem;
     margin-bottom: 3rem; }
+    @media screen and (max-width: 37.5em) {
+      .resources__referee-box--card {
+        width: 100%; } }
     .resources__referee-box--card-sub-heading {
       display: inline-block;
       padding: 1.2rem 4rem;
@@ -623,8 +888,10 @@ body ul {
       text-align: center;
       background-color: #fff;
       box-sizing: border-box;
-      transform: translateY(50%);
-      width: fit-content; }
+      transform: translateY(50%); }
+    @media screen and (max-width: 56.25em) {
+      .resources__referee-box--card p {
+        font-size: 1.2rem; } }
   .resources__referee-box--icon {
     width: 1.4rem;
     height: 1.4rem;
@@ -639,7 +906,6 @@ body ul {
     line-height: 2.7rem; }
 
 /*CUFL*/
-.cufl-nav .active::before,
 .footer-cufl .fcard-active::before,
 .cufl-nav .sidebar__nav--item::after {
   background-image: linear-gradient(to right, #56ab2f, #a8e063); }
@@ -664,7 +930,8 @@ body ul {
 .cufl-competition .competition__link,
 .cufl-rules .rules__link,
 .cufl-resources .resources__downloads--link,
-.cufl-resources .resources__contact--link {
+.cufl-resources .resources__contact--link,
+.cufl-international .international__link {
   background-color: #89dd5f; }
   .cufl-about .about__link:hover, .cufl-about .about__link:active,
   .cufl-competition .competition__link:hover,
@@ -674,7 +941,9 @@ body ul {
   .cufl-resources .resources__downloads--link:hover,
   .cufl-resources .resources__downloads--link:active,
   .cufl-resources .resources__contact--link:hover,
-  .cufl-resources .resources__contact--link:active {
+  .cufl-resources .resources__contact--link:active,
+  .cufl-international .international__link:hover,
+  .cufl-international .international__link:active {
     background-color: #a8e063; }
 
 .cufl-leagues .leagues__card--svg {
@@ -704,6 +973,145 @@ body ul {
   background-size: cover;
   background-position: right bottom; }
 
+/*CFAI*/
+.footer-cfai .fcard-active::before,
+.cfai-nav .sidebar__nav--item::after {
+  background-image: linear-gradient(to right, #f79d00, #f79d00); }
+
+.cfai-heading {
+  color: #007531; }
+
+.cfai-about,
+.cfai-rules {
+  background-color: rgba(247, 157, 0, 0.1); }
+
+.cfai-resources .resources__referee-box--icon {
+  fill: #007531; }
+
+.cfai-committee .committee__backdrop {
+  background-color: rgba(247, 157, 0, 0.5); }
+
+.cfai-about .about__link,
+.cfai-competition .competition__link,
+.cfai-rules .rules__link,
+.cfai-resources .resources__downloads--link,
+.cfai-resources .resources__contact--link {
+  background-color: #71d78a; }
+  .cfai-about .about__link:hover, .cfai-about .about__link:active,
+  .cfai-competition .competition__link:hover,
+  .cfai-competition .competition__link:active,
+  .cfai-rules .rules__link:hover,
+  .cfai-rules .rules__link:active,
+  .cfai-resources .resources__downloads--link:hover,
+  .cfai-resources .resources__downloads--link:active,
+  .cfai-resources .resources__contact--link:hover,
+  .cfai-resources .resources__contact--link:active {
+    background-color: rgba(247, 157, 0, 0.6); }
+
+.cfai-resources .resources__downloads--club-guide,
+.cfai-resources .resources__downloads--team-sheet,
+.cfai-resources .resources__referee-box--contact-card {
+  background-color: rgba(247, 157, 0, 0.2); }
+
+.cfai-rules .rules__list > *::before {
+  background-image: url("../img/soccer.png"), linear-gradient(to right, #3CA55C, #f79d00); }
+
+/*IUFU*/
+.footer-iufu .fcard-active::before,
+.iufu-nav .sidebar__nav--item::after {
+  background-image: linear-gradient(to right, #5066a1, #5066a1); }
+
+.iufu-heading {
+  color: #001746; }
+
+.iufu-about,
+.iufu-rules {
+  background-color: rgba(42, 82, 152, 0.1); }
+
+.iufu-resources .resources__referee-box--icon {
+  fill: #001746; }
+
+.iufu-committee .committee__backdrop {
+  background-color: rgba(80, 102, 161, 0.4); }
+
+.iufu-about .about__link,
+.iufu-competition .competition__link,
+.iufu-rules .rules__link,
+.iufu-resources .resources__downloads--link,
+.iufu-resources .resources__contact--link {
+  color: #fff;
+  background-color: #1e3c72; }
+  .iufu-about .about__link:hover, .iufu-about .about__link:active,
+  .iufu-competition .competition__link:hover,
+  .iufu-competition .competition__link:active,
+  .iufu-rules .rules__link:hover,
+  .iufu-rules .rules__link:active,
+  .iufu-resources .resources__downloads--link:hover,
+  .iufu-resources .resources__downloads--link:active,
+  .iufu-resources .resources__contact--link:hover,
+  .iufu-resources .resources__contact--link:active {
+    background-color: #2a5298; }
+
+.iufu-resources .resources__downloads--club-guide,
+.iufu-resources .resources__downloads--team-sheet,
+.iufu-resources .resources__referee-box--contact-card {
+  background-color: rgba(30, 60, 114, 0.2); }
+
+.iufu-rules .rules__list > *::before {
+  background-image: url("../img/soccer.png"), linear-gradient(to right, #5066a1, #2a5298); }
+
+.iufu-about .arrow-button-icon {
+  fill: #fff; }
+
+.iufu-competition .download-button-icon,
+.iufu-rules .download-button-icon,
+.iufu-resources .download-button-icon,
+.iufu-resources .resources-contact-button-icon {
+  fill: #fff; }
+
+/*wscai*/
+.footer-wscai .fcard-active::before,
+.wscai-nav .sidebar__nav--item::after {
+  background-image: linear-gradient(to right, #FF3366, #ff5ba8); }
+
+.wscai-heading {
+  color: #BA265D; }
+
+.wscai-about,
+.wscai-rules {
+  background-color: rgba(255, 91, 168, 0.1); }
+
+.wscai-resources .resources__referee-box--icon {
+  fill: #BA265D; }
+
+.wscai-committee .committee__backdrop {
+  background-color: rgba(255, 51, 102, 0.4); }
+
+.wscai-about .about__link,
+.wscai-competition .competition__link,
+.wscai-rules .rules__link,
+.wscai-resources .resources__downloads--link,
+.wscai-resources .resources__contact--link {
+  background-color: #ff5ba8; }
+  .wscai-about .about__link:hover, .wscai-about .about__link:active,
+  .wscai-competition .competition__link:hover,
+  .wscai-competition .competition__link:active,
+  .wscai-rules .rules__link:hover,
+  .wscai-rules .rules__link:active,
+  .wscai-resources .resources__downloads--link:hover,
+  .wscai-resources .resources__downloads--link:active,
+  .wscai-resources .resources__contact--link:hover,
+  .wscai-resources .resources__contact--link:active {
+    background-color: #f87277; }
+
+.wscai-resources .resources__downloads--club-guide,
+.wscai-resources .resources__downloads--team-sheet,
+.wscai-resources .resources__referee-box--contact-card {
+  background-color: rgba(248, 114, 119, 0.2); }
+
+.wscai-rules .rules__list > *::before {
+  background-image: url("../img/soccer.png"), linear-gradient(to right, #FF3366, #ff5ba8); }
+
 .footer {
   background-image: url("../img/curvy.png"), linear-gradient(to right, #333, #333);
   background-position: left 10%, center center; }
@@ -717,8 +1125,15 @@ body ul {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start; }
+    @media screen and (max-width: 37.5em) {
+      .footer__box {
+        flex-direction: column; } }
     .footer__box > :not(:last-child) {
       margin-right: 2rem; }
+      @media screen and (max-width: 37.5em) {
+        .footer__box > :not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 4rem; } }
 
 .fcard {
   margin-bottom: 3rem; }

@@ -3,23 +3,19 @@
 }
 .u-heading{
     font-size: 3rem;
-    flex: 1 0 2;
     margin-bottom: 3rem;
+
+    @media screen and (max-width: $bp-small) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
     
     
-}
-.u-line{
-  background-color: #333;
-  height: .9px;
-  display: block;
-  backface-visibility: hidden;
-  flex: 1.5;
 }
 
 .u-center{
   text-align: center;
 }
-
 .u-uppercase{
     text-transform: uppercase;
 }

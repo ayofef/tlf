@@ -10,12 +10,23 @@
         align-items: center;
         background-color: #333;
         width: 100%;
+
+        @media screen and (max-width: $bp-medium) {
+            flex-direction: column;
+        }
         
         
         
 
         &--item{
+
+            @media screen and (max-width: $bp-medium) {
+                border-bottom: 1px solid rgba(#777, .2);
+                width: 100%;
+                text-align: center;
+            }
         }
+        
         &--item::after{
             content: "";
             width: 100%;
@@ -28,7 +39,8 @@
             
           }
           
-        &--item:hover:after{
+        &--item:hover:after,
+        &--item:active:after{
             transform: scaleX(1);
             transform-origin: left;
         }
@@ -59,7 +71,7 @@
         }
         &--dropdown{
             position: absolute;
-            top: 105%;
+            top: 100%;
             left: 0;
             background-color: #434345;
             width: 160px;
@@ -68,14 +80,25 @@
             transform-origin: top;
             transform: scaleY(0);
             transition: transform .2s ease-out;
+
+            /* should be triggered by click event*/
+            @media screen and (max-width: $bp-medium) {
+                position: relative;
+                top: 0;
+                box-shadow: none;
+                transform: scaleY(1);
+                width: 100%;
+            }
         }
     }
 }
 
-.sidebar__resources:hover .sidebar__resources--dropdown{
+.sidebar__resources:hover .sidebar__resources--dropdown,
+.sidebar__resources:active .sidebar__resources--dropdown{
     transform: scaleY(1);
 }
-.sidebar__resources:hover .sidebar__resources--icon{
+.sidebar__resources:hover .sidebar__resources--icon,
+.sidebar__resources:active .sidebar__resources--icon{
     transform: rotate(180deg);
 }
 // .sticky {
@@ -99,3 +122,40 @@
     animation: stickynav .3s ease-out;
 }
 
+
+
+/*Moblie*/
+.navigation__mobile{
+    text-align: center;
+    display: none;
+    
+    &--text{
+        color: #fff;
+        padding: 1rem;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        display: block;
+    }
+}
+
+
+
+@media screen and (max-width: $bp-medium) {
+    .nav-box{
+        display: none;
+            transform: scaleY(0);
+    }
+}
+
+/* should be triggered by click event*/
+// .nav-box{
+//     display: none;
+//     transform: scaleY(0);
+// }
+
+@media screen and (max-width: $bp-medium) {
+    .sidebar{
+        cursor: pointer;
+    }
+}
